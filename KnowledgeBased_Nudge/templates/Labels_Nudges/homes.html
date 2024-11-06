@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Search</title>
+    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@100&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/static/icon/icon.png">
+
+    <style>
+        body {
+            background: url("/static/back/rcp_8.jpeg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: 'Nunito', sans-serif;
+            padding-top: 70px;
+        }
+
+        .header-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            border-radius: 8px 8px 0 0;
+            /* background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%); */
+            /* background: linear-gradient(90deg, rgba(110,181,103,0.9995185574229691) 24%, rgba(39,210,133,1) 44%, rgba(142,217,183,1) 87%); */
+            background: #1f4037;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #99f2c8, #1f4037);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            max-width: 70%;
+            height: 150px;
+            margin: auto;
+
+
+        }
+
+        .container {
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            width: 70%;
+            margin: auto;
+            border-radius: 0 0 8px 8px;
+            background-color: #ffff;
+            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            justify-self: center;
+            align-items: center;
+        }
+
+
+        h1,
+        h2,
+        h3 h4,
+        h5,
+        h6,{
+            font-family: 'Releway', sans-serif;
+        }
+
+        .btn-lg {
+            border-color: #2c7460 !important;
+            background-color: #FFF;
+            color: #1f4037;
+            padding: 0.3em 4.2em;
+            font-size: 20px;
+            border: 0.10em solid;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+
+        .btn-lg:hover {
+            background-image: none !important;
+            background-color: #1f4037 !important;
+            color: seashell;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+
+<div class="header-bar">
+    <!-- <div class="row"> -->
+    <div class="col-lg-2">
+        <img src="/static/icon/icon.png" alt="" style=" 
+            width: 160px;">
+    </div>
+    <div>
+        <h1>Personalized Recipe Recommendation </h1>
+    </div>
+    <!-- </div> -->
+</div>
+
+
+<div class="container">
+
+    <h2 style="margin: auto; padding: 20px; text-align: center;">Welcome </h2>
+
+
+
+    <p>Welcome to our study! The aim of this study is to understand how we can use technology to suggest new recipes to
+        people, based on their preferences.
+        This study is part of the PhD research of Ayoub El Majjodi
+        at the University of Bergen, Norway, under supervision of Prof. Dr. Christoph Trattner and Dr. Alain Starke.
+        <br>
+        Please carefully read the procedure followed in this study to give your informed consent for voluntary
+        participation*.
+    </p>
+    <b>Procedure</b>
+    <br>
+    <!-- <p>
+You will be first asked to answer a few questions about your personal characteristics. Then, you are asked to choose a preferred food category, and to disclose your preferences for recipes in terms of their popularity, serving size, 
+cooking time and the number of ingredients.        
+<br> -->
+Based on your personal preferences, you will afterwards be presented a list of ten personalized recipe recommendations. From that list, please select one recipe that you like the most and would like to cook at home. Afterwards, you will be asked a few questions about the chosen recipe and the decision-making process.
+
+    </p>
+    <b>Duration and compensation</b>
+    <p>The study takes around 5-7 minutes to complete. By clicking the <b>'Start'</b>
+        button, you agree to have read and understood this consent form.</p>
+    <!-- <p><b>Note:</b> <b style="color: red;">Due to the complex computations involved, page loading time may take up to 1 min. 
+        Please bear with us and thank you for your patience.</b></p> -->
+
+    <div style="text-align: center;">
+        <a type="button" value="Start" class="btn-lg" href="/personal_info"> Start </a>
+    </div>
+    <hr style="  border: 0; 
+height: 1px; 
+background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
+    <p style="font-size: 14px; padding-top: 10px; padding-bottom: 10px; color: black;"> <i
+            style="color: red;">*</i> 
+            The collected information is used for writing scientific
+             publications and is only reported at the group level. Your personal information 
+             is processed anonymously and it cannot be traced back to you. 
+             For questions about the study, please contact the experimenter, Ayoub El Majjodi: Ayoub.Majjdo@uib.no
+    </p>
+
+</div>
+
+
+</body>
+
+</html>
