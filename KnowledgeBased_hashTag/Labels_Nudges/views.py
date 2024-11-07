@@ -14,7 +14,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from pandas.core.indexes import category
 
-from Labels_Nudges.app import get_top_recommendations
+from Labels_Nudges.app import get_top_recommendations, get_hashtag
 from .forms import Personal_infoForm,  ChoiceEvaluationForm, ProfileForm
 # from django.forms import formset_factory, modelformset_factory
 from .models import  Personal_info, HealthyRecipe, UnhealthyRecipe, SelectedRecipe,EvaluateChoices, Recommendations, Profile
@@ -251,7 +251,7 @@ def recipe_recommendations(request):
     healthyRecommendations_id = get_top_recommendations(user_preferences, 'H')
     UnhealthyRecommendations_id = get_top_recommendations(user_preferences, 'U')
 
-
+    
     
     
 
@@ -288,6 +288,21 @@ def recipe_recommendations(request):
     
     # selected recipe model
     selected_recipe = SelectedRecipe() 
+    
+    
+ 
+    
+    # get hashtag
+    h_0_features = {
+        'fsa_score':h_0_recipe.Fsa_new, 
+        'calories':h_0_recipe.calories_kCal,
+        'fat':h_0_recipe.fat_100g,
+        'protein':h_0_recipe.protein_g,
+    }
+    
+    h_0_hashtags = get_hashtag(user_preferences, h_0_features, 'healthy')
+    
+    print(h_0_hashtags)
 
     # initialise healthy forms with extracted data
     if request.method == "POST":
@@ -320,7 +335,7 @@ def recipe_recommendations(request):
         selected_recipe.session_id = request.session['session_id']
         selected_recipe.save()
 
-             # save recommendations
+    # save recommendations
         h_recommendations = Recommendations()
         h_recommendations.person_id = person
         h_recommendations.recommended_recipes = [h_0_recipe.id,h_1_recipe.id,h_2_recipe.id,h_3_recipe.id,h_4_recipe.id]
@@ -453,6 +468,7 @@ def error_404(request,exception):
 def error_500(request):
         data = {}
         return render(request,'Labels_Nudges/404.html', data)
+
 
 
 
