@@ -19,13 +19,10 @@
     <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script> -->
 
     <link rel="shortcut icon" href="{% static 'icon/icon.png'%}">
-   
+
 
 
     <style>
-
-
-
         body {
             background: linear-gradient(to right, #f1e6c9, #fff3d1);
             font-family: 'Nunito', sans-serif;
@@ -93,7 +90,7 @@
             background-color: #0056b3;
         }
 
-  
+
 
         .courses-container {
             width: 500px;
@@ -115,7 +112,7 @@
 
         .course-preview img {
             width: 500px;
-            max-height:400px;
+            max-height: 400px;
             object-fit: object;
 
         }
@@ -152,9 +149,9 @@
             flex-wrap: wrap;
             /* gap:6px; */
             width: 100%;
-          
+
             margin-bottom: 10px;
-    
+
             justify-content: center;
             align-items: center;
             /* border: 1px solid red; */
@@ -165,32 +162,34 @@
         }
 
 
-    /* Basic styling for the hashtag container */
-.hashtag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px; /* Space between hashtags */
-    padding: 10px;
-}
+        /* Basic styling for the hashtag container */
+        .hashtag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            /* Space between hashtags */
+            padding: 10px;
+        }
 
-/* Hashtag styling */
-.hashtag {
-    font-size: 1rem;
-    color: #0a0a0a;
-    background-color: #b4d4f5;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 20px;
-    white-space: nowrap; /* Keeps each hashtag on a single line */
-}
+        /* Hashtag styling */
+        .hashtag {
+            font-size: 1rem;
+            color: #0a0a0a;
+            background-color: #b4d4f5;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            /* Keeps each hashtag on a single line */
+        }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .hashtag {
-        font-size: 0.9rem;
-        padding: 5px 10px;
-    }
-}
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .hashtag {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+        }
 
 
         ul {
@@ -218,7 +217,8 @@
             color: #333;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-.carta .nutri {
+
+        .carta .nutri {
             font-weight: bold;
         }
 
@@ -226,11 +226,15 @@
             font-size: 16px;
             font-weight: bold;
         }
-  @media (max-width: 600px) {
-            .recipe_items, .fsa_score {
+
+        @media (max-width: 600px) {
+
+            .recipe_items,
+            .fsa_score {
                 flex-direction: column;
                 align-items: center;
             }
+
             .carta {
                 width: 100%;
             }
@@ -247,19 +251,20 @@
             border-radius: 8px
         }
 
-    .info_title {
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 30px;
-        font-style: bold; 
-        margin-top: 50px;
-        
-    }
-    .info_disc {
-    	font-size:20px;
-    	font-weight:300;
-    	font-style:bold;
-    }
+        .info_title {
+            font-size: 40px;
+            font-weight: 400;
+            line-height: 30px;
+            font-style: bold;
+            margin-top: 50px;
+
+        }
+
+        .info_disc {
+            font-size: 20px;
+            font-weight: 300;
+            font-style: bold;
+        }
 
 
 
@@ -267,34 +272,34 @@
             .level {
                 font-size: 8px;
                 /* background-color: gold; */
-            
-        }
-            .nutri{
+
+            }
+
+            .nutri {
                 font-size: 8px;
             }
+
             .value {
-               font-size:8px;
+                font-size: 8px;
             }
+
             .rcp_title {
                 font-size: 14px;
             }
-            .items{
+
+            .items {
                 font-size: 10px;
             }
+
             .info_title {
                 font-size: 25px;
 
             }
+
             .info_disc {
-                font-size:14px;
+                font-size: 14px;
             }
-    } 
-
-
- 
-
-
-
+        }
     </style>
     <script>
         document.getElementById("id_f_1-recipe_0").checked = true;
@@ -303,15 +308,16 @@
 
 <body>
     <div class="flex-column" style="height:100%;">
-        <div >
-            <span class="info_title" >
-<br>
-            Here we go, these are your personalized recipe recommendations</span>
+        <div>
+            <span class="info_title">
+                <br>
+                Here we go, these are your personalized recipe recommendations</span>
             <br>
             <h4 style="font-size: 20px;
             font-weight: 350;
             line-height: 30px;
-            font-style: bold; margin-top: 10px;">Please carefully review the recipes below and click the <b>'Select Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
+            font-style: bold; margin-top: 10px;">Please carefully review the recipes below and click the <b>'Select
+                    Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
             <hr style="  border: 0; 
                 height: 1px; 
                 background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
@@ -332,38 +338,39 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_0.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{h_0.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{h_0.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_0.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{h_0.2}}' />
+                                </h5>
                                 <div class="recipe_items">
-                                    
-                                        <div class="items">
-                                            <span>Servings</span> <br>
-                                            <span>{{h_0.5}}</span>
-                                        </div>
 
-                                        <div class="items">
-                                            <h6></h6>
-                                            <h7></h7>
-                                        </div>
-                                        <div class="items">
-                                            <span>Serving Size<span> <br>
+                                    <div class="items">
+                                        <span>Servings</span> <br>
+                                        <span>{{h_0.5}}</span>
+                                    </div>
+
+                                    <div class="items">
+                                        <h6></h6>
+                                        <h7></h7>
+                                    </div>
+                                    <div class="items">
+                                        <span>Serving Size<span> <br>
                                                 <span>{{h_0.6}} (g)</span>
-                                        </div>
-                                    
+                                    </div>
+
                                     <!-- --------------hashtag-------------- -->
                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                        <span class="hashtag">{{h_0_hashtags.0}}</span>
+                                        <span class="hashtag">{{h_0_hashtags.1}}</span>
+                                        <span class="hashtag">{{h_0_hashtags.2}}</span>
+                                        <span class="hashtag">{{h_0_hashtags.3}}</span>
+                                        <span class="hashtag">{{h_0_hashtags.4}}</span>
+                                        <span class="hashtag">{{h_0_hashtags.5}}</span>
                                     </div>
 
                                 </div>
 
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
 
@@ -383,7 +390,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_4.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{unh_4.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{unh_4.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_4.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{unh_4.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span> <br>
@@ -398,22 +406,22 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_4.6}} (g)</span>
                                     </div>
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{unh_4_hashtags.0}}</span>
+                                        <span class="hashtag">{{unh_4_hashtags.1}}</span>
+                                        <span class="hashtag">{{unh_4_hashtags.2}}</span>
+                                        <span class="hashtag">{{unh_4_hashtags.3}}</span>
+                                        <span class="hashtag">{{unh_4_hashtags.4}}</span>
+                                        <span class="hashtag">{{unh_4_hashtags.5}}</span>
                                     </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
+                                    <!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
                                     <!---------- Fsa score----------------->
                                 </div>
 
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
 
@@ -434,7 +442,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_2.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{h_2.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{h_2.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_2.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{h_2.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -443,27 +452,27 @@
 
                                     <div class="items">
                                         <h6></h6>
-                                        
+
                                     </div>
                                     <div class="items">
                                         <span>Serving Size</span><br>
                                         <span>{{h_2.6}} (g)</span>
                                     </div>
                                     <!-- --------------fsa_score-------------- -->
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{h_2_hashtags.0}}</span>
+                                        <span class="hashtag">{{h_2_hashtags.1}}</span>
+                                        <span class="hashtag">{{h_2_hashtags.2}}</span>
+                                        <span class="hashtag">{{h_2_hashtags.3}}</span>
+                                        <span class="hashtag">{{h_2_hashtags.4}}</span>
+                                        <span class="hashtag">{{h_2_hashtags.5}}</span>
                                     </div>
                                     <!---------- Fsa score----------------->
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
                         </div>
@@ -483,7 +492,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_3.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{h_3.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{h_3.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_3.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{h_3.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -492,25 +502,25 @@
 
                                     <div class="items">
                                         <h6></h6>
-                                        
+
                                     </div>
                                     <div class="items">
                                         <span>Serving Size</span><br>
                                         <span>{{h_3.6}} (g)</span>
                                     </div>
- <!-- --------------hashtag-------------- -->
- <div class="hashtag-container">
-    <span class="hashtag">#HighProteinFuel</span>
-    <span class="hashtag">#EnergizeYourWeek</span>
-    <span class="hashtag">#SmartFoodChoice</span>
-    <span class="hashtag">#BalancedEating</span>
-    <span class="hashtag">#StayStrongStayActive</span>
-    <span class="hashtag">#PowerYourWorkout</span>
-</div>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{h_3_hashtags.0}}</span>
+                                        <span class="hashtag">{{h_3_hashtags.1}}</span>
+                                        <span class="hashtag">{{h_3_hashtags.2}}</span>
+                                        <span class="hashtag">{{h_3_hashtags.3}}</span>
+                                        <span class="hashtag">{{h_3_hashtags.4}}</span>
+                                        <span class="hashtag">{{h_3_hashtags.5}}</span>
+                                    </div>
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
                         </div>
@@ -528,7 +538,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_2.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{unh_2.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{unh_2.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_2.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{unh_2.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -545,17 +556,17 @@
                                     </div>
                                     <!-- --------------hashtag-------------- -->
                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                        <span class="hashtag">{{unh_2_hashtags.0}}</span>
+                                        <span class="hashtag">{{unh_2_hashtags.1}}</span>
+                                        <span class="hashtag">{{unh_2_hashtags.2}}</span>
+                                        <span class="hashtag">{{unh_2_hashtags.3}}</span>
+                                        <span class="hashtag">{{unh_2_hashtags.4}}</span>
+                                        <span class="hashtag">{{unh_2_hashtags.5}}</span>
                                     </div>
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
                         </div>
@@ -577,7 +588,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_0.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{unh_0.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{unh_0.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_0.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{unh_0.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -592,20 +604,20 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_0.6}} (g)</span>
                                     </div>
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{unh_0_hashtags.0}}</span>
+                                        <span class="hashtag">{{unh_0_hashtags.1}}</span>
+                                        <span class="hashtag">{{unh_0_hashtags.2}}</span>
+                                        <span class="hashtag">{{unh_0_hashtags.3}}</span>
+                                        <span class="hashtag">{{unh_0_hashtags.4}}</span>
+                                        <span class="hashtag">{{unh_0_hashtags.5}}</span>
                                     </div>
                                 </div>
 
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
 
@@ -624,7 +636,8 @@
                                 <h5><label class="rcp_title" for="id_recipe_name">{{unh_1.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{unh_1.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{unh_1.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_1.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{unh_1.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -641,17 +654,17 @@
                                     </div>
                                     <!-- --------------hashtag-------------- -->
                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                        <span class="hashtag">{{unh_1_hashtags.0}}</span>
+                                        <span class="hashtag">{{unh_1_hashtags.1}}</span>
+                                        <span class="hashtag">{{unh_1_hashtags.2}}</span>
+                                        <span class="hashtag">{{unh_1_hashtags.3}}</span>
+                                        <span class="hashtag">{{unh_1_hashtags.4}}</span>
+                                        <span class="hashtag">{{unh_1_hashtags.5}}</span>
                                     </div>
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
                         </div>
@@ -670,7 +683,8 @@
                                 <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_4.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{h_4.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{h_4.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_4.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{h_4.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -685,20 +699,20 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{h_4.6}} (g)</span>
                                     </div>
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{h_4_hashtags.0}}</span>
+                                        <span class="hashtag">{{h_4_hashtags.1}}</span>
+                                        <span class="hashtag">{{h_4_hashtags.2}}</span>
+                                        <span class="hashtag">{{h_4_hashtags.3}}</span>
+                                        <span class="hashtag">{{h_4_hashtags.4}}</span>
+                                        <span class="hashtag">{{h_4_hashtags.5}}</span>
                                     </div>
                                 </div>
 
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
 
@@ -719,7 +733,8 @@
                                 <h5><label class="rcp_title" for="id_recipe_name">{{unh_3.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{unh_3.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{unh_3.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_3.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{unh_3.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -734,19 +749,19 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_3.6}} (g)</span>
                                     </div>
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{unh_3_hashtags.0}}</span>
+                                        <span class="hashtag">{{unh_3_hashtags.1}}</span>
+                                        <span class="hashtag">{{unh_3_hashtags.2}}</span>
+                                        <span class="hashtag">{{unh_3_hashtags.3}}</span>
+                                        <span class="hashtag">{{unh_3_hashtags.4}}</span>
+                                        <span class="hashtag">{{unh_3_hashtags.5}}</span>
                                     </div>
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
                         </div>
@@ -765,7 +780,8 @@
                                 <h5><label class="rcp_title" for="id_recipe_name">{{h_1.0}}</label>
                                     <input type="hidden" name="recipe_name" value='{{h_1.0}}' />
                                     <input type="hidden" name="recipe_id" value='{{h_1.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_1.2}}' /> </h5>
+                                    <input type="hidden" name="healthiness" value='{{h_1.2}}' />
+                                </h5>
                                 <div class="recipe_items">
                                     <div class="items">
                                         <span>Servings</span><br>
@@ -780,20 +796,20 @@
                                         <span>Serving Size</span><br>
                                         <span>{{h_1.6}} (g)</span>
                                     </div>
-                                     <!-- --------------hashtag-------------- -->
-                                     <div class="hashtag-container">
-                                        <span class="hashtag">#HighProteinFuel</span>
-                                        <span class="hashtag">#EnergizeYourWeek</span>
-                                        <span class="hashtag">#SmartFoodChoice</span>
-                                        <span class="hashtag">#BalancedEating</span>
-                                        <span class="hashtag">#StayStrongStayActive</span>
-                                        <span class="hashtag">#PowerYourWorkout</span>
+                                    <!-- --------------hashtag-------------- -->
+                                    <div class="hashtag-container">
+                                        <span class="hashtag">{{h_1_hashtags.0}}</span>
+                                        <span class="hashtag">{{h_1_hashtags.1}}</span>
+                                        <span class="hashtag">{{h_1_hashtags.2}}</span>
+                                        <span class="hashtag">{{h_1_hashtags.3}}</span>
+                                        <span class="hashtag">{{h_1_hashtags.4}}</span>
+                                        <span class="hashtag">{{h_1_hashtags.5}}</span>
                                     </div>
                                 </div>
 
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
+
                                 </div>
                             </div>
 

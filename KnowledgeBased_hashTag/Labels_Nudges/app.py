@@ -67,13 +67,13 @@ client = OpenAI(
   
   
 def get_hashtag(user,recipe, healthiness):
-    
-    bmi = user['BMI']
-    eating_goal = user['eatingGoals']
-    physical_activity = user['behaviour']
+    # print('user---------, hashtag',user)
+    bmi = user['user_bmi']
+    eating_goal = user['eating_goals']
+    physical_activity = user['behavior']
     sleep = user['sleep']
     depression = user['depression']
-    print('reciepes---------',recipe['fsa_score'])
+    # print('reciepes---------',recipe['fsa_score'])
     
     Fsa = recipe['fsa_score']
     calories = recipe['calories']
@@ -84,6 +84,7 @@ def get_hashtag(user,recipe, healthiness):
 
     prompt = f"Generate 6 grammatically correct hashtags to convince a user with a BMI of {bmi}, an eating goal of {eating_goal}, {sleep} hours of sleep, and a depression level of {depression} to {user_behavior} a recipe with an FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
   
+    # print('prompt------',prompt)
     
     if healthiness == 'unhealthy':
         user_behavior = 'avoid'

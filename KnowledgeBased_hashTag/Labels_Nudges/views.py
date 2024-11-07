@@ -172,7 +172,13 @@ def recipe_recommendations(request):
     height, weight, cookingExp, eatingGoals,sleep, behavior,  depression, cookingTime= real_user_input[0][0],real_user_input[0][1],real_user_input[0][2],real_user_input[0][3],real_user_input[0][4],real_user_input[0][5], real_user_input[0][6], real_user_input[0][7]
     
     BMI = weight//(height/100)**2
-    print(BMI, '<----------')
+    user_bmi = BMI
+    user_eating_goals = eatingGoals
+    user_sleep = sleep
+    user_behavior = behavior
+    user_depression = depression
+    
+    # print(BMI, user_bmi, '<----------')
     
     if BMI <= 18:
         BMIL = ['HighCalories','HighCarb','HighProtein']
@@ -245,7 +251,17 @@ def recipe_recommendations(request):
         'depression':depressionL,
         'cookingTime':CookingTimeL   
     }
-    # print('------------',user_preferences)
+    
+  
+
+    KB_hashtag_user_= {
+        'user_bmi' : user_bmi,
+        'sleep': user_sleep,
+        'behavior':behavior,
+        'depression': user_depression,
+        'eating_goals': user_eating_goals,
+    }
+    # print('------------',KB_hashtag_user_)
     
 
     healthyRecommendations_id = get_top_recommendations(user_preferences, 'H')
@@ -292,18 +308,86 @@ def recipe_recommendations(request):
     
  
     
-    # get hashtag
+    # get healthy hashtag
     h_0_features = {
         'fsa_score':h_0_recipe.Fsa_new, 
         'calories':h_0_recipe.calories_kCal,
         'fat':h_0_recipe.fat_100g,
         'protein':h_0_recipe.protein_g,
     }
+    h_1_features = {
+        'fsa_score':h_1_recipe.Fsa_new, 
+        'calories':h_1_recipe.calories_kCal,
+        'fat':h_1_recipe.fat_100g,
+        'protein':h_1_recipe.protein_g,
+    }
+    h_2_features = {
+        'fsa_score':h_2_recipe.Fsa_new, 
+        'calories':h_2_recipe.calories_kCal,
+        'fat':h_2_recipe.fat_100g,
+        'protein':h_2_recipe.protein_g,
+    }
+    h_3_features = {
+        'fsa_score':h_3_recipe.Fsa_new, 
+        'calories':h_3_recipe.calories_kCal,
+        'fat':h_3_recipe.fat_100g,
+        'protein':h_3_recipe.protein_g,
+    }
+    h_4_features = {
+        'fsa_score':h_4_recipe.Fsa_new, 
+        'calories':h_4_recipe.calories_kCal,
+        'fat':h_4_recipe.fat_100g,
+        'protein':h_4_recipe.protein_g,
+    }
     
-    h_0_hashtags = get_hashtag(user_preferences, h_0_features, 'healthy')
+    h_0_hashtags = get_hashtag(KB_hashtag_user_, h_0_features, 'healthy')
+    h_1_hashtags = get_hashtag(KB_hashtag_user_, h_1_features, 'healthy')
+    h_2_hashtags = get_hashtag(KB_hashtag_user_, h_2_features, 'healthy')
+    h_3_hashtags = get_hashtag(KB_hashtag_user_, h_3_features, 'healthy')
+    h_4_hashtags = get_hashtag(KB_hashtag_user_, h_4_features, 'healthy')
     
-    print(h_0_hashtags)
-
+    
+    # get unhealthy hashtag
+    unh_0_features = {
+        'fsa_score':unh_0_recipe.Fsa_new, 
+        'calories':unh_0_recipe.calories_kCal,
+        'fat':unh_0_recipe.fat_100g,
+        'protein':unh_0_recipe.protein_g,
+    }
+    unh_1_features = {
+        'fsa_score':unh_1_recipe.Fsa_new, 
+        'calories':unh_1_recipe.calories_kCal,
+        'fat':unh_1_recipe.fat_100g,
+        'protein':unh_1_recipe.protein_g,
+    }
+    unh_2_features = {
+        'fsa_score':unh_2_recipe.Fsa_new, 
+        'calories':unh_2_recipe.calories_kCal,
+        'fat':unh_2_recipe.fat_100g,
+        'protein':unh_2_recipe.protein_g,
+    }
+    unh_3_features = {
+        'fsa_score':unh_3_recipe.Fsa_new, 
+        'calories':unh_3_recipe.calories_kCal,
+        'fat':unh_3_recipe.fat_100g,
+        'protein':unh_3_recipe.protein_g,
+    }
+    unh_4_features = {
+        'fsa_score':unh_4_recipe.Fsa_new, 
+        'calories':unh_4_recipe.calories_kCal,
+        'fat':unh_4_recipe.fat_100g,
+        'protein':unh_4_recipe.protein_g,
+    }
+    
+    unh_0_hashtags = get_hashtag(KB_hashtag_user_, unh_0_features, 'unhealthy')
+    unh_1_hashtags = get_hashtag(KB_hashtag_user_, unh_1_features, 'unhealthy')
+    unh_2_hashtags = get_hashtag(KB_hashtag_user_, unh_2_features, 'unhealthy')
+    unh_3_hashtags = get_hashtag(KB_hashtag_user_, unh_3_features, 'unhealthy')
+    unh_4_hashtags = get_hashtag(KB_hashtag_user_, unh_4_features, 'unhealthy')
+    
+    print(unh_0_hashtags)
+    # ,unh_1_hashtags,unh_2_hashtags,unh_3_hashtags,unh_4_hashtags)
+    
     # initialise healthy forms with extracted data
     if request.method == "POST":
                 # if the user already select a recipe
@@ -412,15 +496,25 @@ def recipe_recommendations(request):
     return render(request,'Labels_Nudges/recipe_recommendations.html',context={'h_':htop_n_for_target_user, 
                                                 'unh_':unhtop_n_for_target_user,
                                                 'h_0':h_0,
+                                                'h_0_hashtags':h_0_hashtags,
                                                 'h_1':h_1,
+                                                'h_1_hashtags':h_1_hashtags,
                                                 'h_2':h_2,
+                                                'h_2_hashtags':h_2_hashtags,
                                                 'h_3':h_3,
+                                                'h_3_hashtags':h_3_hashtags,
                                                 'h_4':h_4,
+                                                'h_4_hashtags':h_4_hashtags,
                                                 'unh_0':unh_0,
+                                                'unh_0_hashtags':unh_0_hashtags,
                                                 'unh_1':unh_1,
+                                                'unh_1_hashtags':unh_1_hashtags,
                                                 'unh_2':unh_2,
+                                                'unh_2_hashtags':unh_2_hashtags,
                                                 'unh_3':unh_3,
+                                                'unh_3_hashtags':unh_3_hashtags,
                                                 'unh_4':unh_4,
+                                                'unh_4_hashtags':unh_4_hashtags,
                                                 'h_salt':salt_h,
                                                 'h_sugar':sugar_h,
                                                 'h_fat':fat_h,
