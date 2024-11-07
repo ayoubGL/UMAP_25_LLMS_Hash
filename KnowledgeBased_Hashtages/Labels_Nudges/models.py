@@ -482,7 +482,32 @@ class EvaluateChoices(models.Model):
     default=None,
     blank=False
     )
+# -- hashtag evaluations
 
+    understandability = models.CharField(max_length=100,
+        choices=FK__choices,
+        verbose_name='understandability',
+        default=None,
+        blank=False
+    )
+    satisfaction = models.CharField(max_length=100,
+    choices=FK__choices,
+    verbose_name='satisfaction',
+    default=None,
+    blank=False
+    )
+    effectiveness = models.CharField(max_length=100,
+    choices=FK__choices,
+    verbose_name='effectiveness',
+    default=None,
+    blank=False
+    )
+    persuasiveness = models.CharField(max_length=100,
+    choices=FK__choices,
+    verbose_name='persuasiveness',
+    default=None,
+    blank=False
+    )
 
 
 

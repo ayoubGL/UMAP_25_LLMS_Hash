@@ -130,6 +130,12 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'sys_time': forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
             'unders_sys': forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
             'many_actions': forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            
+            # hashtag evaluations
+            'understandability':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            'satisfaction':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            'effectiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            'persuasiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
         }
         labels = {
             
@@ -149,7 +155,15 @@ class ChoiceEvaluationForm(forms.ModelForm):
             # Perceived effort
             'sys_time':'The system takes up a lot of time',
             'unders_sys':'I quickly understood the functionalities of the system',
-            'many_actions':'Many actions were required to use the system'
+            'many_actions':'Many actions were required to use the system',
+            
+            # hashtag eval
+            'understandability': 'The hashtags are understandable ',
+            'satisfaction': 'The hashtags helps to increase my satisfaction with the recommender system',
+            'effectiveness': 'The hashtags helps me to understand to which extent the recommended move meets my preferences',
+            'persuasiveness':  'The hashtags makes me want to watch the recommended movie'
+            
+            
         }
 
 
