@@ -310,30 +310,35 @@ def recipe_recommendations(request):
     
     # get healthy hashtag
     h_0_features = {
+        'title': h_0_recipe.Name,
         'fsa_score':h_0_recipe.Fsa_new, 
         'calories':h_0_recipe.calories_kCal,
         'fat':h_0_recipe.fat_100g,
         'protein':h_0_recipe.protein_g,
     }
     h_1_features = {
+        'title': h_1_recipe.Name,
         'fsa_score':h_1_recipe.Fsa_new, 
         'calories':h_1_recipe.calories_kCal,
         'fat':h_1_recipe.fat_100g,
         'protein':h_1_recipe.protein_g,
     }
     h_2_features = {
+        'title': h_2_recipe.Name,
         'fsa_score':h_2_recipe.Fsa_new, 
         'calories':h_2_recipe.calories_kCal,
         'fat':h_2_recipe.fat_100g,
         'protein':h_2_recipe.protein_g,
     }
     h_3_features = {
+        'title': h_3_recipe.Name,
         'fsa_score':h_3_recipe.Fsa_new, 
         'calories':h_3_recipe.calories_kCal,
         'fat':h_3_recipe.fat_100g,
         'protein':h_3_recipe.protein_g,
     }
     h_4_features = {
+        'title': h_4_recipe.Name,
         'fsa_score':h_4_recipe.Fsa_new, 
         'calories':h_4_recipe.calories_kCal,
         'fat':h_4_recipe.fat_100g,
@@ -349,30 +354,35 @@ def recipe_recommendations(request):
     
     # get unhealthy hashtag
     unh_0_features = {
+        'title': unh_0_recipe.Name,
         'fsa_score':unh_0_recipe.Fsa_new, 
         'calories':unh_0_recipe.calories_kCal,
         'fat':unh_0_recipe.fat_100g,
         'protein':unh_0_recipe.protein_g,
     }
     unh_1_features = {
+        'title': unh_1_recipe.Name,
         'fsa_score':unh_1_recipe.Fsa_new, 
         'calories':unh_1_recipe.calories_kCal,
         'fat':unh_1_recipe.fat_100g,
         'protein':unh_1_recipe.protein_g,
     }
     unh_2_features = {
+        'title': unh_2_recipe.Name,
         'fsa_score':unh_2_recipe.Fsa_new, 
         'calories':unh_2_recipe.calories_kCal,
         'fat':unh_2_recipe.fat_100g,
         'protein':unh_2_recipe.protein_g,
     }
     unh_3_features = {
+        'title': unh_3_recipe.Name,
         'fsa_score':unh_3_recipe.Fsa_new, 
         'calories':unh_3_recipe.calories_kCal,
         'fat':unh_3_recipe.fat_100g,
         'protein':unh_3_recipe.protein_g,
     }
     unh_4_features = {
+        'title': unh_4_recipe.Name,
         'fsa_score':unh_4_recipe.Fsa_new, 
         'calories':unh_4_recipe.calories_kCal,
         'fat':unh_4_recipe.fat_100g,

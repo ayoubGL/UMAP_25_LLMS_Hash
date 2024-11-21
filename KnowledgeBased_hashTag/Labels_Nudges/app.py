@@ -2,7 +2,7 @@
 
 from datetime import datetime
 import csv
-
+import re
 
 from collections import defaultdict
 import os
@@ -79,26 +79,64 @@ def get_hashtag(user,recipe, healthiness):
     calories = recipe['calories']
     fat = recipe['fat']
     protein = recipe['protein']
+    title  = recipe['title']
+    
     
     user_behavior = 'chose'
 
-    prompt = f"Generate 6 grammatically correct hashtags to convince a user with a BMI of {bmi}, an eating goal of {eating_goal}, {sleep} hours of sleep, and a depression level of {depression} to {user_behavior} a recipe with an FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
+    healthy_prompt = f"Generate six grammatically correct hashtags to convince a user with a BMI of {bmi}, an eating goal to {eating_goal}, {sleep} hours of sleep, a {depression} depressed, and {physical_activity} active, to chose {title}.  Highlight the dish\'s healthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
+    
+    unhealthy_prompt = f"Generate six grammatically correct hashtags to dissuade a user with a BMI of {bmi}, an eating goal to {eating_goal},{sleep} hours of sleep,  a {depression} depressed, and {physical_activity}  active,  from choosing  {title}. Highlight the dish\'s unhealthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
   
-    # print('prompt------',prompt)
+  
+  
+   
     
     if healthiness == 'unhealthy':
-        user_behavior = 'avoid'
-        
+       prompt = unhealthy_prompt 
+    else:
+        prompt = healthy_prompt
+    print('prompt------',prompt)  
     
     chat_completion = client.chat.completions.create(
     messages=[
-        {
+        
+        {  
             "role": "user",
             "content": prompt,
         }
     ],
     model="gpt-3.5-turbo",
     )
-    hashtags = chat_completion.choices[0].message.content.split()
+
+    hashtags = re.findall(r'#\w+', chat_completion.choices[0].message.content)
     
     return hashtags
+
+
+# 
+
+# 
+
+# prompt------ Generate 6 grammatically correct hashtags to convince a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to chose Moroccan Tagine a healthy recipe with an FSA score of 6, 265 calories, 0.963675413g fat, and 14.1g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to convince a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to chose Imitation Meatloaf a healthy recipe with an FSA score of 6, 331 calories, 3.867334592g fat, and 17.4g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to convince a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to chose Thai Ginger Chicken (Gai Pad King) a healthy recipe with an FSA score of 4, 491 calories, 1.96719357g fat, and 30.2g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to convince a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to chose Terry's Texas Pinto Beans a healthy recipe with an FSA score of 4, 210 calories, 0.461532813g fat, and 13.2g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to convince a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to chose Tomato-Curry Lentil Stew a healthy recipe with an FSA score of 4, 206 calories, 0.274678112g fat, and 13.7g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to prevent a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to avoid Flank Steak with Avocado Salsa an unhealthy recipe with an FSA score of 10, 540 calories, 9.565638361g fat, and 25.7g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to prevent a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to avoid Hawaiian Chicken II an unhealthy recipe with an FSA score of 10, 540 calories, 4.739843486g fat, and 24.9g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to prevent a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to avoid Very Special Spaghetti Sauce an unhealthy recipe with an FSA score of 10, 508 calories, 9.136934845g fat, and 23.5g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to prevent a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to avoid Chicken with Quinoa and Veggies an unhealthy recipe with an FSA score of 10, 453 calories, 7.026971169g fat, and 23.8g protein.
+
+# prompt------ Generate 6 grammatically correct hashtags to prevent a user with a BMI of 24.0, an eating goal of Lose Weight, ≤7h hours of sleep, a Not at all depressed, and Average (=6h) active, to avoid Sweet and Sour Drumettes an unhealthy recipe with an FSA score of 10, 487 calories, 7.842222952g fat, and 23.0g protein.
+
+# ['1.', '#HealthyEatingGoals', '2.', '#LetSleepBeYourFriend', '3.', '#WellnessOverCalories', '4.', '#MindfulNutritionChoices', '5.', '#StayActiveStayHealthy', '6.', '#ChooseHealthierOptions']
+# [20/Nov/2024 15:21:12] "GET /recipe_recommendations HTTP/1.1" 200 37438

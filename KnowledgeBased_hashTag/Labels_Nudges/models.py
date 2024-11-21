@@ -64,6 +64,26 @@ class Personal_info(models.Model):
 			  verbose_name = 'FK_12',
 			default = None,
 			blank = False)
+    sus_1 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_1',
+			default = None,
+			blank = False)
+    sus_2 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_2',
+			default = None,
+			blank = False)
+    sus_3 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_3',
+			default = None,
+			blank = False)
+    sus_4 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_4',
+			default = None,
+			blank = False)
     
     
 
