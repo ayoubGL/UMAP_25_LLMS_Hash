@@ -101,9 +101,13 @@ def get_hashtag(user,recipe, healthiness):
     chat_completion = client.chat.completions.create(
     messages=[
         
+        {
+            "role":'system',
+            "content": 'you are a nutritionist '
+        },
         {  
             "role": "user",
-            "content": prompt,
+            "content": i,
         }
     ],
     model="gpt-3.5-turbo",

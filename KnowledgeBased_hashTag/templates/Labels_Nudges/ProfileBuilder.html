@@ -101,7 +101,7 @@
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
-        
+
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -174,7 +174,49 @@
             padding: auto;
 
         }
+
+        .loader-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 1000px;
+            height: 400px;
+            margin: auto;
+            border-radius: 12px 12px 12px 12px;
+            background: #fdf1cfd2;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            position: fixed;
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+
+        }
+
+        .loading-content{
+            font-size: xxx-large;
+            font-family: monospace;
+            font-weight: 1000;
+        }
+        .spinner-border{
+            width: 15rem;
+            height: 15rem;
+            text-align: center;
+        }
     </style>
+    <script>
+
+        function openLoader() {
+            document.getElementById("submitted").style.display = "none"; 
+            document.getElementById("loadingModal").style.display = "block";
+            
+        }
+        
+      
+
+    </script>
 </head>
 
 <body>
@@ -187,118 +229,117 @@
             <h4 style="font-size: 20px;
         font-weight: 350;
         line-height: 30px;
-        font-style: bold; margin-top: 10px;">Please answer the questions below about your food preferences. You will receive personalized recipe recommendation that better matches your profile.</h4>
+        font-style: bold; margin-top: 10px;">Please answer the questions below about your food preferences. You will
+                receive personalized recipe recommendation that better matches your profile.</h4>
 
         </div>
         <hr style="  border: 0; 
         height: 1px; 
         background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
         <div>
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="openLoader()">
                 {{form.errors}}
                 {% csrf_token %}
 
 
-        <!------------------------- height weights --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <div>
-                <!-- <p><b>{{form.Height.label}} </b></p> -->
-                <p style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                    <span style=" margin-left: 12px; margin-right: 12px;"><b> {{form.Height.label}}</b></span>
-                    {{form.Height}}
-                </p>
-            </div>
-            <div>
-                <!-- <p><b>{{form.Weight.label}} </b></p> -->
-                <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                    <span style=" margin-left: 12px; margin-right: 12px;"><b> {{form.Weight.label}}</b></span>
-                    {{form.Weight}}
+                <!------------------------- height weights --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <div>
+                        <!-- <p><b>{{form.Height.label}} </b></p> -->
+                        <p style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                            <span style=" margin-left: 12px; margin-right: 12px;"><b> {{form.Height.label}}</b></span>
+                            {{form.Height}}
+                        </p>
+                    </div>
+                    <div>
+                        <!-- <p><b>{{form.Weight.label}} </b></p> -->
+                        <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                            <span style=" margin-left: 12px; margin-right: 12px;"><b> {{form.Weight.label}}</b></span>
+                            {{form.Weight}}
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <!------------------------- RecipeWebUsage --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.RecipeWebUsage.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.RecipeWebUsage}}
+                    </div>
+                </div>
+                <!------------------------- HomeCook --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.HomeCook.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.HomeCook}}
+                    </div>
+                </div>
+                <!------------------------- CookingExp --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.CookingExp.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.CookingExp}}
+                    </div>
+                </div>
+                <!------------------------- CookingTime --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.CookingTime.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.CookingTime}}
+                    </div>
+                </div>
+                <!------------------------- EatingGoals --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.EatingGoals.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.EatingGoals}}
+                    </div>
+                </div>
+                <!------------------------- Computing Recommendations --------------------------->
+                <div id="loadingModal" class="loader-container" style="display: none;">
+                    <div class="loading-content">
+                        <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
+                        <p>Computing Your Recommendations...</p>
+                    </div>
+                </div>
+                <!------------------------- PhysicalActivity --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <!-- <div> -->
+                    <p class="col-sm-9 flabel"><span><b>{{form.PhysicalActivity.label}}</b><br>(all movement including,
+                            going from place to place).</b></p>
+
+                    <!-- </div> -->
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.PhysicalActivity}}
+
+                    </div>
+                </div>
+                <!------------------------- SleepHours --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.SleepHours.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.SleepHours}}
+                    </div>
+                </div>
+
+
+
+
+                <!------------------------- Mood --------------------------->
+                <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
+                    <p class="col-sm-9 flabel"><b>{{form.Depression.label}} </b></p>
+                    <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
+                        {{form.Depression}}
+                    </div>
+                </div>
+
+                <!------------------------- Next --------------------------->
+                <div style="text-align: right; margin-bottom:30px; margin-top:30px;" >
+                    <button  id="submitted" type="submit " name="submit" class="btn-lg col-4" style="display: block;"> Next </button>
+                </div>
+
+            </form>
         </div>
-
-        <!------------------------- RecipeWebUsage --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.RecipeWebUsage.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.RecipeWebUsage}}
-            </div>
-        </div>
-        <!------------------------- HomeCook --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.HomeCook.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.HomeCook}}
-            </div>
-        </div>
-        <!------------------------- CookingExp --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.CookingExp.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.CookingExp}}
-            </div>
-        </div>
-        <!------------------------- CookingTime --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.CookingTime.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.CookingTime}}
-            </div>
-        </div>
-        <!------------------------- EatingGoals --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.EatingGoals.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.EatingGoals}}
-            </div>
-        </div>
-
-        <!------------------------- PhysicalActivity --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <!-- <div> -->
-                <p class="col-sm-9 flabel"><span><b>{{form.PhysicalActivity.label}}</b><br>(all movement including, going from place to place).</b></p>
-            
-            <!-- </div> -->
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.PhysicalActivity}}
-             
-            </div>
-        </div>
-        <!------------------------- SleepHours --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.SleepHours.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.SleepHours}}
-            </div>
-        </div>
-
-
-
-
-        <!------------------------- Mood --------------------------->
-        <div class="flabel" style="padding-top: 15px; margin-bottom:20px;">
-            <p class="col-sm-9 flabel"><b>{{form.Depression.label}} </b></p>
-            <div style="padding: 6px; font-weight: 500; margin-left: 12px;" class="col-sm">
-                {{form.Depression}}
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-        <!------------------------- Next --------------------------->
-        <div style="text-align: right; margin-bottom:30px; margin-top:30px;">
-
-            <button type="submit " name="submit" class="btn-lg col-4"> Next </buttton>
-        </div>
-
-        </form>
-    </div>
 
     </div>
     <a id="back2Top" title="Back to top" href="#">&#10148;</a>

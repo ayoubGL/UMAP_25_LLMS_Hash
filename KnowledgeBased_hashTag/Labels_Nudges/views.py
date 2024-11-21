@@ -395,7 +395,7 @@ def recipe_recommendations(request):
     unh_3_hashtags = get_hashtag(KB_hashtag_user_, unh_3_features, 'unhealthy')
     unh_4_hashtags = get_hashtag(KB_hashtag_user_, unh_4_features, 'unhealthy')
     
-    print(unh_0_hashtags)
+    # print(unh_0_hashtags)
     # ,unh_1_hashtags,unh_2_hashtags,unh_3_hashtags,unh_4_hashtags)
     
     # initialise healthy forms with extracted data
