@@ -71,7 +71,7 @@
 
 
         .btn-select {
-            display: block;
+            /* display: block; */
             width: 100%;
             padding: 10px;
             margin-top: 10px;
@@ -82,7 +82,7 @@
             background-color: #007bff;
             border: none;
             border-radius: 4px;
-            cursor: pointer;
+            /* cursor: pointer; */
             transition: background-color 0.2s ease;
         }
 
@@ -190,7 +190,7 @@
             font-weight: bold;
             padding: 6px 12px;
             border-radius: 20px;
-            white-space: nowrap;
+            /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
 
@@ -311,9 +311,50 @@
                 font-size: 14px;
             }
         }
+
+        .loader-container {
+            display: flex;
+    flex-direction: column;
+    width: 80%; /* Corrected */
+    height: 100%;
+    margin: auto;
+    border-radius: 12px 12px 12px 12px;
+    background: #fdf1cfd2;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center align text inside the div */
+            
+        }
+
+        .loading-content{
+            font-size: xxx-large;
+            font-family: monospace;
+            font-weight: 1000;
+        }
+        .spinner-border{
+            width: 15rem;
+            height: 15rem;
+            text-align: center;
+        }
     </style>
     <script>
         document.getElementById("id_f_1-recipe_0").checked = true;
+        
+  
+
+        function openLoader() {
+            document.getElementById("submitted").style.display = "none"; 
+            document.getElementById("loadingModal").style.display = "block";
+            
+        }
+        
+      
+
     </script>
 </head>
 
@@ -338,7 +379,7 @@
             <!-- ================= left bar ================= -->
             <div class="flex-left">
                 <!-- -----------------h_0-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -380,7 +421,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -390,7 +431,7 @@
                 </form>
 
                 <!------------------------ unh_4 ------------------->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -431,7 +472,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -442,7 +483,7 @@
 
 
                 <!-- -----------------h_2-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -482,8 +523,7 @@
                                     <!---------- Fsa score----------------->
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -492,7 +532,7 @@
 
 
                 <!-- -----------------h_3-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -530,15 +570,14 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
                 <!------ unh_2 --------------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -576,19 +615,24 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-
+        <!------------------------- Computing Recommendations --------------------------->
+                <div id="loadingModal" class="loader-container" style="display: none;">
+                    <div class="loading-content">
+                        <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
+                        <p>Preparing your last step...</p>
+                    </div>
+                </div>
             <!-- ================= right bar ================= -->
             <div class="flex-right">
                 <!------ unh_0 --------------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -627,8 +671,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
 
@@ -636,7 +679,7 @@
                     </div>
                 </form>
                 <!-- -----------------unh_1-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -674,8 +717,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -683,7 +725,7 @@
                 </form>
 
                 <!-- -----------------h_4-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -722,8 +764,7 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
 
@@ -733,7 +774,7 @@
 
 
                 <!-- ----------------- unh_3-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -771,8 +812,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -780,7 +820,7 @@
                 </form>
 
                 <!-- -----------------h_1-------------------- -->
-                <form action="" method="POST">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -819,8 +859,8 @@
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-
+                                    
+                                    <button  id="submitted" type="submit " name="submit" class="btn-select" style="display: block;" >Select Recipe</button>
                                 </div>
                             </div>
 

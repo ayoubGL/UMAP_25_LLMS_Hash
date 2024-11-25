@@ -390,6 +390,7 @@ class Recommendations(models.Model):
     recommended_recipes = models.CharField(max_length=500)
     healthiness = models.CharField(max_length=50)
     created = models.DateTimeField(auto_now_add=True)
+    llm_nudges = models.CharField(max_length=2300)
 
 
 

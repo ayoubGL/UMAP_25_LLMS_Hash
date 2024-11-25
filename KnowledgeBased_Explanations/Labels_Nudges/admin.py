@@ -99,8 +99,9 @@ class EvaluateChoicesAdmin(admin.ModelAdmin):
     'know_many','recommend_recipe','many_to_choose','easy_choice','choice_overwhelming','sys_time','unders_sys','many_actions','created')
     actions = [export_as_csv_action("CSV Export")]
 
+
 class RecommedationsAdmin(admin.ModelAdmin):
-    list_display = ('id','person','recommended_recipes','healthiness', 'created')
+    list_display = ('id','person','recommended_recipes','healthiness','llm_nudges', 'created')
     actions = [export_as_csv_action("CSV Export")]
 
 # class Ghs_fkAdmin(admin.ModelAdmin):

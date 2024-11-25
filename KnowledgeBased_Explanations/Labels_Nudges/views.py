@@ -434,12 +434,14 @@ def recipe_recommendations(request):
         h_recommendations = Recommendations()
         h_recommendations.person_id = person
         h_recommendations.recommended_recipes = [h_0_recipe.id,h_1_recipe.id,h_2_recipe.id,h_3_recipe.id,h_4_recipe.id]
+        h_recommendations.llm_nudges = [h_0_explanation,h_1_explanation,h_2_explanation,h_3_explanation,h_4_explanation]
         h_recommendations.healthiness = 'Healthy'
         h_recommendations.save()
 
         unh_recommendations = Recommendations()
         unh_recommendations.person_id = person
         unh_recommendations.recommended_recipes = [unh_0_recipe.id,unh_1_recipe.id,unh_2_recipe.id,unh_3_recipe.id,unh_4_recipe.id]
+        unh_recommendations.llm_nudges = [unh_0_explanation,unh_1_explanation,unh_2_explanation,unh_3_explanation,unh_4_explanation]
         unh_recommendations.healthiness = 'Unhealthy'
         unh_recommendations.save()
 
