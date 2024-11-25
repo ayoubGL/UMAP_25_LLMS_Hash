@@ -167,10 +167,10 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'many_actions':'Many actions were required to use the system',
             
             # hashtag eval
-            'understandability': 'The hashtags are understandable ',
-            'satisfaction': 'The hashtags helps to increase my satisfaction with the recommender system',
-            'effectiveness': 'The hashtags helps me to understand to which extent the recommended recipe meets my preferences',
-            'persuasiveness':  'The hashtags makes me want to watch the recommended recipe'
+            'understandability': 'The explanations are understandable ',
+            'satisfaction': 'The explanations helps to increase my satisfaction with the recommender system',
+            'effectiveness': 'The explanations helps me to understand to which extent the recommended recipe meets my preferences',
+            'persuasiveness':  'The explanations makes me want to watch the recommended recipe'
             
             
         }

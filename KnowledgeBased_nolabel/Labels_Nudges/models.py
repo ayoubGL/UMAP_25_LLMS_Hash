@@ -65,6 +65,27 @@ class Personal_info(models.Model):
 			default = None,
 			blank = False)
     
+    sus_1 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_1',
+			default = None,
+			blank = False)
+    sus_2 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_2',
+			default = None,
+			blank = False)
+    sus_3 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_3',
+			default = None,
+			blank = False)
+    sus_4 = models.CharField(max_length = 300,
+ 			    choices = FK__choices,
+			  verbose_name = 'sus_4',
+			default = None,
+			blank = False)
+    
     
 
     # other_diet = models.CharField(("other_diet"), max_length=50, default='0')
@@ -482,32 +503,32 @@ class EvaluateChoices(models.Model):
     default=None,
     blank=False
     )
-# -- hashtag evaluations
+# # -- hashtag evaluations
 
-    understandability = models.CharField(max_length=100,
-        choices=FK__choices,
-        verbose_name='understandability',
-        default=None,
-        blank=False
-    )
-    satisfaction = models.CharField(max_length=100,
-    choices=FK__choices,
-    verbose_name='satisfaction',
-    default=None,
-    blank=False
-    )
-    effectiveness = models.CharField(max_length=100,
-    choices=FK__choices,
-    verbose_name='effectiveness',
-    default=None,
-    blank=False
-    )
-    persuasiveness = models.CharField(max_length=100,
-    choices=FK__choices,
-    verbose_name='persuasiveness',
-    default=None,
-    blank=False
-    )
+#     understandability = models.CharField(max_length=100,
+#         choices=FK__choices,
+#         verbose_name='understandability',
+#         default=None,
+#         blank=False
+#     )
+#     satisfaction = models.CharField(max_length=100,
+#     choices=FK__choices,
+#     verbose_name='satisfaction',
+#     default=None,
+#     blank=False
+#     )
+#     effectiveness = models.CharField(max_length=100,
+#     choices=FK__choices,
+#     verbose_name='effectiveness',
+#     default=None,
+#     blank=False
+#     )
+#     persuasiveness = models.CharField(max_length=100,
+#     choices=FK__choices,
+#     verbose_name='persuasiveness',
+#     default=None,
+#     blank=False
+#     )
 
 
 

@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'NudgingWithFoodLabels.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'kb_hashtag',
+        'NAME': 'kb_nolabel',
         'USER':'ayoub',
         'PASSWORD':'ayoub123',
         'HOST':'localhost',

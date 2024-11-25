@@ -96,7 +96,7 @@ def get_hashtag(user,recipe, healthiness):
        prompt = unhealthy_prompt 
     else:
         prompt = healthy_prompt
-    print('prompt------',prompt)  
+    # print('prompt------',prompt)  
     
     chat_completion = client.chat.completions.create(
     messages=[
