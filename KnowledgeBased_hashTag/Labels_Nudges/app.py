@@ -60,7 +60,7 @@ import openai
 from openai import OpenAI
 client = OpenAI(
     # This is the default and can be omitted
-    api_key=("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"),
+    api_key=("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"),
 )
 
 # OpenAI model
@@ -107,7 +107,7 @@ def get_hashtag(user,recipe, healthiness):
         },
         {  
             "role": "user",
-            "content": i,
+            "content": prompt,
         }
     ],
     model="gpt-3.5-turbo",
