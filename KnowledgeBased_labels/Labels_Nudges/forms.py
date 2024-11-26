@@ -160,8 +160,8 @@ class ChoiceEvaluationForm(forms.ModelForm):
             # hashtag eval
             'understandability': 'The nutritional  labels are understandable ',
             'satisfaction': 'The nutritional labels helps to increase my satisfaction with the recommender system',
-            'effectiveness': 'The nutritional labels helps me to understand to which extent the recommended move meets my preferences',
-            'persuasiveness':  'The nutritional labels makes me want to watch the recommended movie'
+            'effectiveness': 'The nutritional labels helps me to understand to which extent the recommended recipes meets my preferences',
+            'persuasiveness':  'The nutritional labels makes me want to select the recommended recipe'
             
             
         }
