@@ -67,7 +67,7 @@ def export_as_csv_action(description="Export selected objects as CSV file", fiel
 # @admin.register(Personal_info)
 class Personal_infoAdmin(admin.ModelAdmin):
     list_display = ('id','session_id','created','age','gender','country','education', 'FK_9',
-'FK_10','FK_11','FK_12')
+'FK_10','FK_11','FK_12','sus_1', 'sus_2','sus_3','sus_4')
     actions = [export_as_csv_action("CSV Export")]
 
 
@@ -96,7 +96,7 @@ class SelectedRecipeAdmin(admin.ModelAdmin):
 
 class EvaluateChoicesAdmin(admin.ModelAdmin):
     list_display = ('id','person','session_id','liked_recipes','prepare_recipes','fit_preference',
-    'know_many','recommend_recipe','many_to_choose','easy_choice','choice_overwhelming','sys_time','unders_sys','many_actions','created')
+    'know_many','recommend_recipe','many_to_choose','easy_choice','choice_overwhelming','sys_time','unders_sys','many_actions','understandability','satisfaction','effectiveness','persuasiveness','created')
     actions = [export_as_csv_action("CSV Export")]
 
 
