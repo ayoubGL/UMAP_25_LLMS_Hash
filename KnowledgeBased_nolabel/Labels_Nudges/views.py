@@ -207,7 +207,7 @@ def recipe_recommendations(request):
 
     
     if  depression == 'Quite a lot':
-        depression ['HighProtein', 'LowCarbs']
+        depressionL= ['HighProtein', 'LowCarbs']
     elif depression == 'Not at all':
         depressionL =  ['NormalProtein', 'NormalCarbs']
     else:

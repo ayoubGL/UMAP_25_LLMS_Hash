@@ -38,15 +38,14 @@ databases:
 	[x] KB_expl
 
 - Add llm generated to selected
-	[] KB_label 
-	[] KB_nolabel
-	[] KB_hashtags
+
+	[x] KB_hashtags
 	[x] KB_expl
 
 - Depression to deepresionL
 	[] KB_label 
 	[] KB_nolabel
-	[] KB_hashtags
+	[x] KB_hashtags
 	[x] KB_expl
 
 
@@ -54,3 +53,9 @@ databases:
 
  sudo systemctl restart KB_nolabel KB_label KB_hashtags KB_explanations
 
+#NutrientRichChoice
+#BalancedNutrition
+#HealthyEatingMadeEasy
+#SatisfyingAndHealthy
+#FuelYourBodyRight
+#NourishingChoice
