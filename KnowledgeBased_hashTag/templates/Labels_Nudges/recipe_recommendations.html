@@ -374,7 +374,7 @@
             <!-- ================= left bar ================= -->
             <div class="flex-left">
                 <!-- -----------------h_0-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -411,12 +411,13 @@
                                         <span class="hashtag">{{h_0_hashtags.3}}</span>
                                         <span class="hashtag">{{h_0_hashtags.4}}</span>
                                         <span class="hashtag">{{h_0_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{h_0_hashtags}}' />
                                     </div>
 
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -426,7 +427,7 @@
                 </form>
 
                 <!------------------------ unh_4 ------------------->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -461,13 +462,14 @@
                                         <span class="un_hashtag">{{unh_4_hashtags.3}}</span>
                                         <span class="un_hashtag">{{unh_4_hashtags.4}}</span>
                                         <span class="un_hashtag">{{unh_4_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{unh_4_hashtags}}' />
                                     </div>
                                     <!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
                                     <!---------- Fsa score----------------->
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -478,7 +480,7 @@
 
 
                 <!-- -----------------h_2-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -514,11 +516,12 @@
                                         <span class="hashtag">{{h_2_hashtags.3}}</span>
                                         <span class="hashtag">{{h_2_hashtags.4}}</span>
                                         <span class="hashtag">{{h_2_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{h_2_hashtags}}' />
                                     </div>
                                     <!---------- Fsa score----------------->
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -528,7 +531,7 @@
 
 
                 <!-- -----------------h_3-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -563,10 +566,11 @@
                                         <span class="hashtag">{{h_3_hashtags.3}}</span>
                                         <span class="hashtag">{{h_3_hashtags.4}}</span>
                                         <span class="hashtag">{{h_3_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{h_3_hashtags}}' />
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -574,7 +578,7 @@
                     </div>
                 </form>
                 <!------ unh_2 --------------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -609,10 +613,11 @@
                                         <span class="un_hashtag">{{unh_2_hashtags.3}}</span>
                                         <span class="un_hashtag">{{unh_2_hashtags.4}}</span>
                                         <span class="un_hashtag">{{unh_2_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{unh_2_hashtags}}' />
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -628,9 +633,9 @@
                 </div>
             </div>
             <!-- ================= right bar ================= -->
-            <div class="flex-right">
+            <div class="flex-right" >
                 <!------ unh_0 --------------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -665,11 +670,12 @@
                                         <span class="un_hashtag">{{unh_0_hashtags.3}}</span>
                                         <span class="un_hashtag">{{unh_0_hashtags.4}}</span>
                                         <span class="un_hashtag">{{unh_0_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{unh_0_hashtags}}' />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -678,7 +684,7 @@
                     </div>
                 </form>
                 <!-- -----------------unh_1-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -713,10 +719,11 @@
                                         <span class="un_hashtag">{{unh_1_hashtags.3}}</span>
                                         <span class="un_hashtag">{{unh_1_hashtags.4}}</span>
                                         <span class="un_hashtag">{{unh_1_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{unh_1_hashtags}}' />
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -725,7 +732,7 @@
                 </form>
 
                 <!-- -----------------h_4-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -760,11 +767,12 @@
                                         <span class="hashtag">{{h_4_hashtags.3}}</span>
                                         <span class="hashtag">{{h_4_hashtags.4}}</span>
                                         <span class="hashtag">{{h_4_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{h_4_hashtags}}' />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -775,7 +783,7 @@
 
 
                 <!-- ----------------- unh_3-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -810,10 +818,11 @@
                                         <span class="un_hashtag">{{unh_3_hashtags.3}}</span>
                                         <span class="un_hashtag">{{unh_3_hashtags.4}}</span>
                                         <span class="un_hashtag">{{unh_3_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{unh_3_hashtags}}' />
                                     </div>
                                 </div>
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -822,7 +831,7 @@
                 </form>
 
                 <!-- -----------------h_1-------------------- -->
-                <form action="" method="POST">
+                 <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -857,11 +866,12 @@
                                         <span class="hashtag">{{h_1_hashtags.3}}</span>
                                         <span class="hashtag">{{h_1_hashtags.4}}</span>
                                         <span class="hashtag">{{h_1_hashtags.5}}</span>
+                                        <input type="hidden" name="hashtag" value='{{h_1_hashtags}}' />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>

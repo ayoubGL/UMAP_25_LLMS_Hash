@@ -91,7 +91,7 @@ class UnhealthyRecipeAdmin(ImportExportModelAdmin):
 
     
 class SelectedRecipeAdmin(admin.ModelAdmin):
-    list_display = ('id','person','session_id','recipe_name','recipe_id','healthiness','Nutri_score','fsa_score','created')
+    list_display = ('id','person','session_id','recipe_name','recipe_id','healthiness','Nutri_score','fsa_score','llm_hashtag','created')
     actions = [export_as_csv_action("CSV Export")]
 
 

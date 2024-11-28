@@ -409,6 +409,7 @@ class SelectedRecipe(models.Model):
     fsa_score = models.CharField(max_length=100)
 
     healthiness = models.CharField(max_length=50)
+    llm_hashtag = models.CharField(max_length=1000)
     
     # llm_nudges = models.CharField(max_length=800)
 
