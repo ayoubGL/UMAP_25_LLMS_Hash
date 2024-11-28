@@ -213,7 +213,7 @@ def recipe_recommendations(request):
 
     
     if  depression == 'Quite a lot':
-        depression ['HighProtein', 'LowCarbs']
+        depressionL = ['HighProtein', 'LowCarbs']
     elif depression == 'Not at all':
         depressionL =  ['NormalProtein', 'NormalCarbs']
     else:
@@ -416,6 +416,7 @@ def recipe_recommendations(request):
         recipe_name = request.POST.get('recipe_name')
         recipe_id = request.POST.get('recipe_id')
         recipe_h  = request.POST.get('healthiness')
+        recipe_exp = request.POST.get('expl')
 
         if recipe_h == 'healthy':
             nutri__fsa = HealthyRecipe.objects.filter(id=recipe_id).values_list('Nutri_score','Fsa_new')
@@ -427,6 +428,7 @@ def recipe_recommendations(request):
         selected_recipe.recipe_name = recipe_name
         selected_recipe.recipe_id = recipe_id
         selected_recipe.healthiness = recipe_h
+        selected_recipe.llm_explanation = recipe_exp
         selected_recipe.session_id = request.session['session_id']
         selected_recipe.save()
 

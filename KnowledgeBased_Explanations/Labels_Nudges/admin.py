@@ -91,7 +91,7 @@ class UnhealthyRecipeAdmin(ImportExportModelAdmin):
 
     
 class SelectedRecipeAdmin(admin.ModelAdmin):
-    list_display = ('id','person','session_id','recipe_name','recipe_id','healthiness','Nutri_score','fsa_score','created')
+    list_display = ('id','person','session_id','recipe_name','recipe_id','healthiness','Nutri_score','fsa_score','llm_explanation','created')
     actions = [export_as_csv_action("CSV Export")]
 
 class EvaluateChoicesAdmin(admin.ModelAdmin):
@@ -112,7 +112,7 @@ class RecommedationsAdmin(admin.ModelAdmin):
 admin.site.register(EvaluateChoices, EvaluateChoicesAdmin)
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(SelectedRecipe, SelectedRecipeAdmin)
-admin.site.register(Personal_info, Personal_infoAdmin)
+admin.site.register(Personal_info, Personal_infoAdmin) 
 admin.site.register(FoodCategory, FoodCategoryAdmin)
 admin.site.register(UnhealthyRecipe, UnhealthyRecipeAdmin)
 admin.site.register(HealthyRecipe, HealthyRecipeAdmin)
