@@ -175,23 +175,26 @@
         /* Hashtag styling */
         .hashtag {
             font-size: 1rem;
-color: #0a0a0a;
-/* background-color: #7df08c; */
-font-weight: bold;
-padding: 6px 12px;
-border-radius: 20px;
-border: 2px solid #2e2f30; /* Adds a blue border */
+            color: #0a0a0a;
+            /* background-color: #7df08c; */
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 2px solid #2e2f30;
+            /* Adds a blue border */
             /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
+
         .un_hashtag {
             font-size: 1rem;
-color: #0a0a0a;
-/* background-color: #7df08c; */
-font-weight: bold;
-padding: 6px 12px;
-border-radius: 20px;
-border: 2px solid #2e2f30; /* Adds a blue border */
+            color: #0a0a0a;
+            /* background-color: #7df08c; */
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 2px solid #2e2f30;
+            /* Adds a blue border */
             /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
@@ -316,29 +319,36 @@ border: 2px solid #2e2f30; /* Adds a blue border */
 
         .loader-container {
             display: flex;
-    flex-direction: column;
-    width: 80%; /* Corrected */
-    height: 100%;
-    margin: auto;
-    border-radius: 12px 12px 12px 12px;
-    background: #fdf1cfd2;
-    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-    position: fixed;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%);
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center align text inside the div */
-            
+            flex-direction: column;
+            width: 80%;
+            /* Corrected */
+            height: 100%;
+            margin: auto;
+            border-radius: 12px 12px 12px 12px;
+            background: #fdf1cfd2;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+            position: fixed;
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            text-align: center;
+            /* Center align text inside the div */
+
         }
 
-        .loading-content{
+        .loading-content {
             font-size: xxx-large;
             font-family: monospace;
             font-weight: 1000;
         }
-        .spinner-border{
+
+        .spinner-border {
             width: 15rem;
             height: 15rem;
             text-align: center;
@@ -346,16 +356,16 @@ border: 2px solid #2e2f30; /* Adds a blue border */
     </style>
     <script>
         document.getElementById("id_f_1-recipe_0").checked = true;
-        
-  
+
+
 
         function openLoader() {
-            document.getElementById("submitted").style.display = "none"; 
+            document.getElementById("submitted").style.display = "none";
             document.getElementById("loadingModal").style.display = "block";
-            
+
         }
-        
-      
+
+
 
     </script>
 </head>
@@ -424,7 +434,8 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                 </div>
 
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -476,7 +487,8 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                 </div>
 
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
 
                                 </div>
                             </div>
@@ -519,12 +531,13 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                     <div class="hashtag-container">
                                         <div class="hashtag">{{h_2_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{h_2_explanation}}' />
-                             
+
                                     </div>
                                     <!---------- Fsa score----------------->
                                 </div>
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -532,15 +545,15 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                 </form>
 
 
-               
+
             </div>
-        <!------------------------- Computing Recommendations --------------------------->
-                <div id="loadingModal" class="loader-container" style="display: none;">
-                    <div class="loading-content">
-                        <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
-                        <p>Preparing your last step...</p>
-                    </div>
+            <!------------------------- Computing Recommendations --------------------------->
+            <div id="loadingModal" class="loader-container" style="display: none;">
+                <div class="loading-content">
+                    <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
+                    <p>Preparing your last step...</p>
                 </div>
+            </div>
             <!-- ================= right bar ================= -->
             <div class="flex-right">
                 <!------ unh_0 --------------------------- -->
@@ -571,24 +584,25 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                         <span>Serving Size</span><br>
                                         <span>{{unh_0.6}} (g)</span>
                                     </div>
-                              
+
                                     <div class="hashtag-container">
                                         <div class="un_hashtag">{{unh_0_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{unh_0_explanation}}' />
-                                       
+
                                     </div>
                                 </div>
 
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </form>
-                 <!-- -----------------h_3-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                <!-- -----------------h_3-------------------- -->
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -615,15 +629,16 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                         <span>Serving Size</span><br>
                                         <span>{{h_3.6}} (g)</span>
                                     </div>
-                                
+
                                     <div class="hashtag-container">
                                         <div class="hashtag">{{h_3_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{h_3_explanation}}' />
-                               
+
                                     </div>
                                 </div>
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -657,15 +672,16 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                                         <span>Serving Size</span><br>
                                         <span>{{unh_2.6}} (g)</span>
                                     </div>
-                               
+
                                     <div class="hashtag-container">
                                         <div class="un_hashtag">{{unh_2_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{unh_2_explanation}}' />
-                              
+
                                     </div>
                                 </div>
                                 <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select"
+                                        style="display: block;">Select Recipe</button>
                                 </div>
                             </div>
                         </div>
@@ -846,7 +862,7 @@ border: 2px solid #2e2f30; /* Adds a blue border */
                         </div>
                     </div>
                 </form> -->
-               
+
 
             </div>
 
@@ -854,11 +870,11 @@ border: 2px solid #2e2f30; /* Adds a blue border */
         <hr style="  border: 0; 
         height: 1px; 
         background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
-    <h4 style="font-size: 20px;
+        <h4 style="font-size: 20px;
     font-weight: 350;
     line-height: 30px;
     font-style: bold; margin-top: 10px;">Please carefully review the recipes above and click the <b>'Select
-    Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
+                Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
     </div>
 
 

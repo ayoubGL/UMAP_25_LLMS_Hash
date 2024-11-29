@@ -175,22 +175,26 @@
         .hashtag {
             font-size: 1rem;
             color: #0a0a0a;
-            background-color: #7df08c;
+            /* background-color: #7df08c; */
             font-weight: bold;
             padding: 6px 12px;
             border-radius: 20px;
-            white-space: nowrap;
+            border: 2px solid #2e2f30;
+            /* Adds a blue border */
+            /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
 
         .un_hashtag {
             font-size: 1rem;
             color: #0a0a0a;
-            background-color: #ef6a5b;
+            /* background-color: #7df08c; */
             font-weight: bold;
             padding: 6px 12px;
             border-radius: 20px;
-            white-space: nowrap;
+            border: 2px solid #2e2f30;
+            /* Adds a blue border */
+            /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
 
@@ -480,7 +484,24 @@
 
 
                 <!-- -----------------h_2-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!------------------------- Computing Recommendations --------------------------->
+            <div id="loadingModal" class="loader-container" style="display: none;">
+                <div class="loading-content">
+                    <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
+                    <p>Preparing your last step...</p>
+                </div>
+            </div>
+            <!-- ================= right bar ================= -->
+            <div class="flex-right" >
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -529,9 +550,8 @@
                     </div>
                 </form>
 
-
                 <!-- -----------------h_3-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -619,21 +639,6 @@
                                 <div>
                                     <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <!------------------------- Computing Recommendations --------------------------->
-            <div id="loadingModal" class="loader-container" style="display: none;">
-                <div class="loading-content">
-                    <h1 class="spinner-border spinner-border-lg text-primary" role="status" aria-hidden="true"></h1>
-                    <p>Preparing your last step...</p>
-                </div>
-            </div>
-            <!-- ================= right bar ================= -->
-            <div class="flex-right" >
                 <!------ unh_0 --------------------------- -->
                  <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
@@ -684,7 +689,7 @@
                     </div>
                 </form>
                 <!-- -----------------unh_1-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                 <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -711,7 +716,7 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{unh_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                              
                                     <div class="hashtag-container">
                                         <span class="un_hashtag">{{unh_1_hashtags.0}}</span>
                                         <span class="un_hashtag">{{unh_1_hashtags.1}}</span>
@@ -729,10 +734,10 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- -----------------h_4-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                 <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -759,7 +764,7 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{h_4.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                               
                                     <div class="hashtag-container">
                                         <span class="hashtag">{{h_4_hashtags.0}}</span>
                                         <span class="hashtag">{{h_4_hashtags.1}}</span>
@@ -779,11 +784,11 @@
 
                         </div>
                     </div>
-                </form>
+                </form> -->
 
 
                 <!-- ----------------- unh_3-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                 <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -810,7 +815,7 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_3.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                                  
                                     <div class="hashtag-container">
                                         <span class="un_hashtag">{{unh_3_hashtags.0}}</span>
                                         <span class="un_hashtag">{{unh_3_hashtags.1}}</span>
@@ -828,10 +833,10 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- -----------------h_1-------------------- -->
-                 <form action="" method="POST" onsubmit="openLoader()">
+                 <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -858,7 +863,7 @@
                                         <span>Serving Size</span><br>
                                         <span>{{h_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                                  
                                     <div class="hashtag-container">
                                         <span class="hashtag">{{h_1_hashtags.0}}</span>
                                         <span class="hashtag">{{h_1_hashtags.1}}</span>
@@ -878,7 +883,7 @@
 
                         </div>
                     </div>
-                </form>
+                </form> -->
 
 
 
