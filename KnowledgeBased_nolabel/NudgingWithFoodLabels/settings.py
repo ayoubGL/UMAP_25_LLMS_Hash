@@ -28,11 +28,7 @@ SECRET_KEY = 'django-insecure-zi%kppxlz7_z7xitkti-t_)yo%l+8wlliz&&n(k4m%yw!_r*u4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-<<<<<<< HEAD
 DEBUG = True
-=======
-DEBUG = False
->>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
 
 ALLOWED_HOSTS = ["*"]
 
@@ -97,15 +93,9 @@ WSGI_APPLICATION = 'NudgingWithFoodLabels.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-<<<<<<< HEAD
-        'NAME': 'kb_nolabel',
-        'USER':'ayoub',
-        'PASSWORD':'ayoub123',
-=======
         'NAME': 'llm_nolabels',
         'USER':'ayoub',
         'PASSWORD':'ayoub1234',
->>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
         'HOST':'localhost',
         'PORT':'',
     }
