@@ -600,6 +600,114 @@
                 </form>
 
 
+            </div>
+
+            <!-- ================= right bar ================= -->
+            <div class="flex-right">
+                <!------ unh_0 --------------------------- -->
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="courses-container">
+                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
+                            <div class="course-preview">
+                                <img src="{{unh_0.3}}">
+                            </div>
+                            <div class="course-info">
+                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_0.0}}</label>
+                                    <input type="hidden" name="recipe_name" value='{{unh_0.0}}' />
+                                    <input type="hidden" name="recipe_id" value='{{unh_0.1}}' />
+                                    <input type="hidden" name="healthiness" value='{{unh_0.2}}' /> </h5>
+                                <div class="recipe_items">
+                                    <div class="items">
+                                        <span>Servings</span><br>
+                                        <span>{{unh_0.5}}</span>
+                                    </div>
+
+                                    <div class="items">
+                                        <h6></h6>
+                                        <h7></h7>
+                                    </div>
+                                    <div class="items">
+                                        <span>Serving Size</span><br>
+                                        <span>{{unh_0.6}} (g)</span>
+                                    </div>
+                                    <!-- --------------fsa_score-------------- -->
+                                    <div class="d-flex flex-row fsa_score">
+                                    
+                                        <div class="card carta" style="background: white;">
+                                            <div class="nutri">
+                                                <b>Cal</b>
+                                            </div>
+                                            <div class="value">
+                                                <b>{{unh_0.4}}</b>
+                                            </div>
+                                            <div class="level">
+                                                <b> Kcal </b>
+                                            </div>
+                                        </div>
+
+                                        <div class="card carta" style="background: {{unh_sugar.0.0.0}};">
+                                            <div class="nutri">
+                                                <b>Sugar</b>
+                                            </div>
+                                            <div class="value">
+                                                <b>{{unh_sugar.1|floatformat:2}}g</b>
+                                            </div>
+                                            <div class="level">
+                                                <b> {{unh_sugar.0.0.1}}</b>
+                                            </div>
+
+                                        </div>
+                                        <div class="card carta" style="background: {{unh_fat.0.0.0}};">
+                                            <div class="nutri">
+                                                <b>Fat</b>
+                                            </div>
+                                            <div class="value">
+                                                <b>{{unh_fat.1|floatformat:2}}g</b>
+                                            </div>
+                                            <div class="level">
+                                                <b> {{unh_fat.0.0.1}}</b>
+                                            </div>
+
+                                        </div>
+                                        <div class="card carta" style="background-color:{{unh_satfat.0.0.0}};">
+                                            <div class="nutri"><b>Sa Fat </b>
+                                            </div>
+                                            <div class="value">
+                                                <b>{{unh_satfat.1|floatformat:2}}g</b>
+                                            </div>
+                                            <div class="level">
+                                                <b> {{unh_satfat.0.0.1}}</b>
+                                            </div>
+
+                                        </div>
+                                        <div class="card carta" style="background: {{unh_salt.0.0.0}};">
+                                            <div class="nutri">
+                                                <b>Salt</b>
+                                            </div>
+                                            <div class="value">
+                                                <b>{{unh_salt.1|floatformat:2}}g</b>
+                                            </div>
+                                            <div class="level">
+                                                <b> {{unh_salt.0.0.1}} </b>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
+                                    <!---------- Fsa score----------------->
+                                </div>
+
+                                <div>
+                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
+                
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
                 <!-- -----------------h_3-------------------- -->
                 <form action="" method="POST">
                     {% csrf_token %}
@@ -804,116 +912,8 @@
                         </div>
                     </div>
                 </form>
-            </div>
-
-            <!-- ================= right bar ================= -->
-            <div class="flex-right">
-                <!------ unh_0 --------------------------- -->
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <div class="courses-container">
-                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
-                            <div class="course-preview">
-                                <img src="{{unh_0.3}}">
-                            </div>
-                            <div class="course-info">
-                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_0.0}}</label>
-                                    <input type="hidden" name="recipe_name" value='{{unh_0.0}}' />
-                                    <input type="hidden" name="recipe_id" value='{{unh_0.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_0.2}}' /> </h5>
-                                <div class="recipe_items">
-                                    <div class="items">
-                                        <span>Servings</span><br>
-                                        <span>{{unh_0.5}}</span>
-                                    </div>
-
-                                    <div class="items">
-                                        <h6></h6>
-                                        <h7></h7>
-                                    </div>
-                                    <div class="items">
-                                        <span>Serving Size</span><br>
-                                        <span>{{unh_0.6}} (g)</span>
-                                    </div>
-                                    <!-- --------------fsa_score-------------- -->
-                                    <div class="d-flex flex-row fsa_score">
-                                    
-                                        <div class="card carta" style="background: white;">
-                                            <div class="nutri">
-                                                <b>Cal</b>
-                                            </div>
-                                            <div class="value">
-                                                <b>{{unh_0.4}}</b>
-                                            </div>
-                                            <div class="level">
-                                                <b> Kcal </b>
-                                            </div>
-                                        </div>
-
-                                        <div class="card carta" style="background: {{unh_sugar.0.0.0}};">
-                                            <div class="nutri">
-                                                <b>Sugar</b>
-                                            </div>
-                                            <div class="value">
-                                                <b>{{unh_sugar.1|floatformat:2}}g</b>
-                                            </div>
-                                            <div class="level">
-                                                <b> {{unh_sugar.0.0.1}}</b>
-                                            </div>
-
-                                        </div>
-                                        <div class="card carta" style="background: {{unh_fat.0.0.0}};">
-                                            <div class="nutri">
-                                                <b>Fat</b>
-                                            </div>
-                                            <div class="value">
-                                                <b>{{unh_fat.1|floatformat:2}}g</b>
-                                            </div>
-                                            <div class="level">
-                                                <b> {{unh_fat.0.0.1}}</b>
-                                            </div>
-
-                                        </div>
-                                        <div class="card carta" style="background-color:{{unh_satfat.0.0.0}};">
-                                            <div class="nutri"><b>Sa Fat </b>
-                                            </div>
-                                            <div class="value">
-                                                <b>{{unh_satfat.1|floatformat:2}}g</b>
-                                            </div>
-                                            <div class="level">
-                                                <b> {{unh_satfat.0.0.1}}</b>
-                                            </div>
-
-                                        </div>
-                                        <div class="card carta" style="background: {{unh_salt.0.0.0}};">
-                                            <div class="nutri">
-                                                <b>Salt</b>
-                                            </div>
-                                            <div class="value">
-                                                <b>{{unh_salt.1|floatformat:2}}g</b>
-                                            </div>
-                                            <div class="level">
-                                                <b> {{unh_salt.0.0.1}} </b>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
-                                    <!---------- Fsa score----------------->
-                                </div>
-
-                                <div>
-                                    <button type="submit" name="submit" class="btn-select">Select Recipe</button>
-                
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </form>
                 <!-- -----------------unh_1-------------------- -->
-                <form action="" method="POST">
+                <!-- <form action="" method="POST">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -939,7 +939,7 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{unh_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------fsa_score-------------- -->
+                                
                                     <div class="d-flex flex-row fsa_score">
                                        
                                         <div class="card carta" style="background: white;">
@@ -1004,8 +1004,7 @@
                                         </div>
 
                                     </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
-                                    <!---------- Fsa score----------------->
+
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
@@ -1014,10 +1013,10 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- -----------------h_4-------------------- -->
-                <form action="" method="POST">
+                <!-- <form action="" method="POST">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -1043,7 +1042,7 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{h_4.6}} (g)</span>
                                     </div>
-                                    <!-- --------------fsa_score-------------- -->
+                                   
                                     <div class="d-flex flex-row fsa_score">
                                         
                                         <div class="card carta" style="background: white;">
@@ -1108,8 +1107,7 @@
 
 
                                     </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
-                                    <!---------- Fsa score----------------->
+
                                 </div>
 
                                 <div>
@@ -1120,11 +1118,11 @@
 
                         </div>
                     </div>
-                </form>
+                </form> -->
 
 
                 <!-- ----------------- unh_3-------------------- -->
-                <form action="" method="POST">
+                <!-- <form action="" method="POST">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -1150,7 +1148,7 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_3.6}} (g)</span>
                                     </div>
-                                    <!-- --------------fsa_score-------------- -->
+                                 
                                     <div class="d-flex flex-row fsa_score">
                                       
                                         <div class="card carta" style="background: white;">
@@ -1216,8 +1214,7 @@
                                         </div>
 
                                     </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
-                                    <!---------- Fsa score----------------->
+
                                 </div>
                                 <div>
                                     <button type="submit" name="submit" class="btn-select">Select Recipe</button>
@@ -1226,10 +1223,10 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- -----------------h_1-------------------- -->
-                <form action="" method="POST">
+                <!-- <form action="" method="POST">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -1255,7 +1252,7 @@
                                         <span>Serving Size</span><br>
                                         <span>{{h_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------fsa_score-------------- -->
+                                
                                     <div class="d-flex flex-row fsa_score">
                                        
                                         <div class="card carta" style="background: white;">
@@ -1319,8 +1316,7 @@
                                         </div>
 
                                     </div>
-<!-- <small style="font-size: 12px;">* Nutritional content per serving, of an adult's reference intake</small> -->
-                                    <!---------- Fsa score----------------->
+
                                 </div>
 
                                 <div>
@@ -1331,14 +1327,21 @@
 
                         </div>
                     </div>
-                </form>
+                </form> -->
 
 
 
             </div>
 
         </div>
-
+        <hr style="  border: 0; 
+        height: 1px; 
+        background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
+    <h4 style="font-size: 20px;
+    font-weight: 350;
+    line-height: 30px;
+    font-style: bold; margin-top: 10px;">Please carefully review the recipes above and click the <b>'Select
+    Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
     </div>
 
 

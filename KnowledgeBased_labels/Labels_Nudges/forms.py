@@ -48,11 +48,7 @@ class Personal_infoForm(forms.ModelForm):
             'sus_1': 'I believe that sustainable diet is important in my everyday life',
             'sus_2': 'Compared with average person, I know  about the environmental impact of food production',
             'sus_3': 'I believe that individual choices can make a difference in environmental sustainability',
-<<<<<<< HEAD
-            'sus_4': 'I believe that sustainable eating is a complex',
-=======
             'sus_4': 'I believe that sustainable eating is complex',
->>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
         
         }
 
@@ -175,7 +171,7 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'understandability': 'The nutritional  labels are understandable ',
             'satisfaction': 'The nutritional labels helps to increase my satisfaction with the recommender system',
             'effectiveness': 'The nutritional labels helps me to understand to which extent the recommended recipes meets my preferences',
-            'persuasiveness':  'The nutritional labels makes me want to select the recommended recipe'
+            'persuasiveness':  'The nutritional labels help me to make the final recipe choice'
             
             
         }

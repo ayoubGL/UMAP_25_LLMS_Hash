@@ -25,7 +25,7 @@ databases:
 	[x] KB_expl
 
 - change choice , weight
-	[] KB_label 
+	[x] KB_label 
 	[x] KB_nolabel
 	[x] KB_hashtags
 	[x] KB_expl
@@ -58,19 +58,19 @@ databases:
 - evaluation questionnaire: 'The explanations helps me to make the final recipe choice'
 	[x] KB_expl.       
 	[] KB_hashtags
-	[] KB_label 
+	[x] KB_label 
 	[] KB_nolabel
 
 - Please Carefully
 	[x] KB_expl.       
 	[] KB_hashtags
-	[] KB_label 
+	[x] KB_label 
 	[] KB_nolabel
 
 - Recipe number h1, unh3, h4, unh_1
 	[x] KB_expl.        
-	[x] KB_hashtags
-	[] KB_label 
+	[] KB_hashtags
+	[x] KB_label 
 	[] KB_nolabel
 
 

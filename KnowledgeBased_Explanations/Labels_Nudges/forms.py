@@ -170,7 +170,7 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'understandability': 'The explanations are understandable ',
             'satisfaction': 'The explanations helps to increase my satisfaction with the recommender system',
             'effectiveness': 'The explanations helps me to understand to which extent the recommended recipe meets my preferences',
-            'persuasiveness':  'The explanations helps me to make the final recipe choice'
+            'persuasiveness':  'The explanations help me to make the final recipe choice'
             
             
         }
