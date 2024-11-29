@@ -29,8 +29,8 @@ import re
  #   request.session['person_id'] = 0
   #  return render(request, 'Labels_Nudges/homes.html', context={})
 #=======
-import re
-#>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
+
+
 
 def home(request):
     request.session['person_id'] = 0
@@ -48,6 +48,7 @@ def home(request):
     else:
         request.session['prolific_id'] = '000'
     return render(request, 'Labels_Nudges/homes.html')
+#<<<<<<< HEAD
 
 def personal_info(request):
     user_selected = Personal_info.objects.filter(id = request.session['person_id'])
@@ -199,7 +200,7 @@ def recipe_recommendations(request):
 
     
     if  depression == 'Quite a lot':
-        depressionL=ß ['HighProtein', 'LowCarbs']
+        depressionL= ['HighProtein', 'LowCarbs']
     elif depression == 'Not at all':
         depressionL =  ['NormalProtein', 'NormalCarbs']
     else:
@@ -267,15 +268,15 @@ def recipe_recommendations(request):
 
     # extract 5 healthy recipes
     h_0_recipe = HealthyRecipe.objects.get(id=id_h_recipes[0])
-    # h_1_recipe = HealthyRecipe.objects.get(id=id_h_recipes[1])
+    h_1_recipe = HealthyRecipe.objects.get(id=id_h_recipes[1])
     h_2_recipe = HealthyRecipe.objects.get(id=id_h_recipes[2])
     h_3_recipe = HealthyRecipe.objects.get(id=id_h_recipes[3])
-    # h_4_recipe = HealthyRecipe.objects.get(id=id_h_recipes[4])
+    h_4_recipe = HealthyRecipe.objects.get(id=id_h_recipes[4])
     # extract 5 unhhealthy recipes
     unh_0_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[0])
-    # unh_1_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[1])
+    unh_1_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[1])
     unh_2_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[2])
-    # unh_3_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[3])
+    unh_3_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[3])
     unh_4_recipe = UnhealthyRecipe.objects.get(id=id_unh_recipes[4])
     
     # selected recipe model
@@ -315,13 +316,13 @@ def recipe_recommendations(request):
              # save recommendations
         h_recommendations = Recommendations()
         h_recommendations.person_id = person
-        h_recommendations.recommended_recipes = [h_0_recipe.id,h_2_recipe.id,h_3_recipe.id]
+        h_recommendations.recommended_recipes = [h_0_recipe.id,h_1_recipe.id,h_2_recipe.id,h_3_recipe.id,h_4_recipe.id]
         h_recommendations.healthiness = 'Healthy'
         h_recommendations.save()
 
         unh_recommendations = Recommendations()
         unh_recommendations.person_id = person
-        unh_recommendations.recommended_recipes = [unh_0_recipe.id,unh_2_recipe.id,unh_4_recipe.id]
+        unh_recommendations.recommended_recipes = [unh_0_recipe.id,unh_1_recipe.id,unh_2_recipe.id,unh_3_recipe.id,unh_4_recipe.id]
         unh_recommendations.healthiness = 'Unhealthy'
         unh_recommendations.save()
 
@@ -332,8 +333,8 @@ def recipe_recommendations(request):
         h_0 = [h_0_recipe.Name, id_h_recipes[0], 'healthy', h_0_recipe.image_link, int(float(h_0_recipe.calories_kCal)),
                                  int(float(h_0_recipe.Servings)),int(float(h_0_recipe.size_g) // float(h_0_recipe.Servings)), h_0_recipe.salt_g,h_0_recipe.sugar_g,h_0_recipe.fat_g,h_0_recipe.saturate_g]
         
-        # h_1 = [h_1_recipe.Name, id_h_recipes[1], 'healthy', , int(float(h_1_recipe.calories_kCal)),
-        #                          int(float(h_1_recipe.Servings)),int(float(h_1_recipe.size_g) // float(h_1_recipe.Servings)), h_1_recipe.salt_g,h_1_recipe.sugar_g,h_1_recipe.fat_g,h_1_recipe.saturate_g]
+        h_1 = [h_1_recipe.Name, id_h_recipes[1], 'healthy', h_1_recipe.image_link, int(float(h_1_recipe.calories_kCal)),
+                                 int(float(h_1_recipe.Servings)),int(float(h_1_recipe.size_g) // float(h_1_recipe.Servings)), h_1_recipe.salt_g,h_1_recipe.sugar_g,h_1_recipe.fat_g,h_1_recipe.saturate_g]
         
         h_2 = [h_2_recipe.Name, id_h_recipes[2], 'healthy', h_2_recipe.image_link, int(float(h_2_recipe.calories_kCal)), 
                                int(float(h_2_recipe.Servings)),int(float(h_2_recipe.size_g) // float(h_2_recipe.Servings)), h_2_recipe.salt_g,h_2_recipe.sugar_g,h_2_recipe.fat_g,h_2_recipe.saturate_g]
@@ -341,62 +342,62 @@ def recipe_recommendations(request):
         h_3 = [h_3_recipe.Name, id_h_recipes[3], 'healthy', h_3_recipe.image_link, int(float(h_3_recipe.calories_kCal)),
                                  int(float(h_3_recipe.Servings)),int(float(h_3_recipe.size_g) // float(h_3_recipe.Servings)), h_3_recipe.salt_g,h_3_recipe.sugar_g,h_3_recipe.fat_g,h_3_recipe.saturate_g]
         
-        # h_4 = [h_4_recipe.Name, id_h_recipes[4], 'healthy', h_4_recipe.image_link, int(float(h_4_recipe.calories_kCal)), 
-        #                         int(float(h_4_recipe.Servings)),int(float(h_4_recipe.size_g) // float(h_4_recipe.Servings)), h_4_recipe.salt_g,h_4_recipe.sugar_g,h_4_recipe.fat_g,h_4_recipe.saturate_g]
+        h_4 = [h_4_recipe.Name, id_h_recipes[4], 'healthy', h_4_recipe.image_link, int(float(h_4_recipe.calories_kCal)), 
+                                int(float(h_4_recipe.Servings)),int(float(h_4_recipe.size_g) // float(h_4_recipe.Servings)), h_4_recipe.salt_g,h_4_recipe.sugar_g,h_4_recipe.fat_g,h_4_recipe.saturate_g]
         
         
      
         
 
-        h_salt =[int(float(h_0_recipe.salt_count)),int(float(h_2_recipe.salt_count)),int(float(h_3_recipe.salt_count)),]
-        h_sugar = [int(float(h_0_recipe.sugar_count)),int(float(h_2_recipe.sugar_count)), int(float(h_3_recipe.sugar_count))]
-        h_fat =[int(float(h_0_recipe.fat_count)), int(float(h_2_recipe.fat_count)),int(float(h_3_recipe.fat_count))]
-        h_satfat =[ int(float(h_0_recipe.satfat_count)),int(float(h_2_recipe.satfat_count)),int(float(h_3_recipe.satfat_count))]
+        h_salt =[int(float(h_0_recipe.salt_count)),int(float(h_1_recipe.salt_count)),int(float(h_2_recipe.salt_count)),int(float(h_3_recipe.salt_count)),int(float(h_4_recipe.salt_count))]
+        h_sugar = [int(float(h_0_recipe.sugar_count)),int(float(h_1_recipe.sugar_count)),int(float(h_2_recipe.sugar_count)), int(float(h_3_recipe.sugar_count)), int(float(h_4_recipe.sugar_count))]
+        h_fat =[int(float(h_0_recipe.fat_count)), int(float(h_1_recipe.fat_count)), int(float(h_2_recipe.fat_count)),int(float(h_3_recipe.fat_count)),int(float(h_4_recipe.fat_count))]
+        h_satfat =[ int(float(h_0_recipe.satfat_count)),int(float(h_1_recipe.satfat_count)),int(float(h_2_recipe.satfat_count)),int(float(h_3_recipe.satfat_count)), int(float(h_4_recipe.satfat_count))]
 
 
-        salt_h = [mtl_color(h_salt),h_0[7],h_2[7], h_3[7], ] 
-        sugar_h = [ mtl_color(h_sugar),h_0[8], h_2[8], h_3[8], ] 
-        fat_h = [mtl_color(h_fat),h_0[9],h_2[9], h_3[9], ] 
-        satfat_h = [ mtl_color(h_satfat),h_0[10], h_2[10], h_3[10], ]
+        salt_h = [mtl_color(h_salt),h_0[7], h_1[7], h_2[7], h_3[7], h_4[7]] 
+        sugar_h = [ mtl_color(h_sugar),h_0[8],h_1[8], h_2[8], h_3[8], h_4[8]] 
+        fat_h = [mtl_color(h_fat),h_0[9], h_1[9], h_2[9], h_3[9], h_4[9]] 
+        satfat_h = [ mtl_color(h_satfat),h_0[10], h_1[10], h_2[10], h_3[10], h_4[10]]
 
 
 
         unh_0 = [unh_0_recipe.Name, id_unh_recipes[0], 'unhealthy', unh_0_recipe.image_link, int(float(unh_0_recipe.calories_kCal)), int(float(unh_0_recipe.Servings)),int(float(unh_0_recipe.size_g) // float(unh_0_recipe.Servings)),unh_0_recipe.salt_g,unh_0_recipe.sugar_g,unh_0_recipe.fat_g,unh_0_recipe.saturate_g]
        
-        # unh_1 = [unh_1_recipe.Name, id_unh_recipes[1], 'unhealthy', unh_1_recipe.image_link, int(float(unh_1_recipe.calories_kCal)),int(float(unh_1_recipe.Servings)),int(float(unh_1_recipe.size_g) // float(unh_1_recipe.Servings)),unh_1_recipe.salt_g,unh_1_recipe.sugar_g,unh_1_recipe.fat_g,unh_1_recipe.saturate_g]
+        unh_1 = [unh_1_recipe.Name, id_unh_recipes[1], 'unhealthy', unh_1_recipe.image_link, int(float(unh_1_recipe.calories_kCal)),int(float(unh_1_recipe.Servings)),int(float(unh_1_recipe.size_g) // float(unh_1_recipe.Servings)),unh_1_recipe.salt_g,unh_1_recipe.sugar_g,unh_1_recipe.fat_g,unh_1_recipe.saturate_g]
        
-        unh_2 = [unh_2_recipe.Name, id_unh_recipes[2], 'unhealthy', unh_2_recipe.image_link, int(float(unh_2_recipe.calories_kCal)), int(float(unh_2_recipe.Servings)),int(float(unh_2_recipe.size_g) // float(unh_2_recipe.Servings)),unh_2_recipe.salt_g,unh_2_recipe.sugar_g,unh_2_recipe.fat_g,unh_2_recipe.saturate_g]
+        unh_2 = [unh_2_recipe.Name, id_unh_recipes[2], 'unhealthy', unh_2_recipe.image_link, int(float(unh_2_recipe.calories_kCal)), int(float(unh_2_recipe.Servings)),int(float(unh_3_recipe.size_g) // float(unh_3_recipe.Servings)),unh_2_recipe.salt_g,unh_2_recipe.sugar_g,unh_2_recipe.fat_g,unh_2_recipe.saturate_g]
        
-        # unh_3 = [unh_3_recipe.Name, id_unh_recipes[3], 'unhealthy', unh_3_recipe.image_link, int(float(unh_3_recipe.calories_kCal)), int(float(unh_3_recipe.Servings)),int(float(unh_3_recipe.size_g) // float(unh_3_recipe.Servings)),unh_3_recipe.salt_g,unh_3_recipe.sugar_g,unh_3_recipe.fat_g,unh_3_recipe.saturate_g]
+        unh_3 = [unh_3_recipe.Name, id_unh_recipes[3], 'unhealthy', unh_3_recipe.image_link, int(float(unh_3_recipe.calories_kCal)), int(float(unh_3_recipe.Servings)),int(float(unh_3_recipe.size_g) // float(unh_3_recipe.Servings)),unh_3_recipe.salt_g,unh_3_recipe.sugar_g,unh_3_recipe.fat_g,unh_3_recipe.saturate_g]
        
         unh_4 = [unh_4_recipe.Name, id_unh_recipes[4], 'unhealthy', unh_4_recipe.image_link, int(float(unh_4_recipe.calories_kCal)), int(float(unh_4_recipe.Servings)),int(float(unh_4_recipe.size_g) // float(unh_4_recipe.Servings)),unh_4_recipe.salt_g,unh_4_recipe.sugar_g,unh_4_recipe.fat_g,unh_4_recipe.saturate_g]
         
     
-        unh_salt =[int(float(unh_0_recipe.salt_count)),int(float(unh_2_recipe.salt_count)),int(float(unh_4_recipe.salt_count))]
-        unh_sugar = [int(float(unh_0_recipe.sugar_count)),int(float(unh_2_recipe.sugar_count)), int(float(unh_4_recipe.sugar_count))]
-        unh_fat =[int(float(unh_0_recipe.fat_count)),  int(float(unh_2_recipe.fat_count)),int(float(unh_4_recipe.fat_count))]
-        unh_satfat =[ int(float(unh_0_recipe.satfat_count)),int(float(unh_2_recipe.satfat_count)), int(float(unh_4_recipe.satfat_count))]
+        unh_salt =[int(float(unh_0_recipe.salt_count)),int(float(unh_1_recipe.salt_count)),int(float(unh_2_recipe.salt_count)),int(float(unh_3_recipe.salt_count)),int(float(unh_4_recipe.salt_count))]
+        unh_sugar = [int(float(unh_0_recipe.sugar_count)),int(float(unh_1_recipe.sugar_count)),int(float(unh_2_recipe.sugar_count)), int(float(unh_3_recipe.sugar_count)), int(float(unh_4_recipe.sugar_count))]
+        unh_fat =[int(float(unh_0_recipe.fat_count)), int(float(unh_1_recipe.fat_count)), int(float(unh_2_recipe.fat_count)),int(float(unh_3_recipe.fat_count)),int(float(unh_4_recipe.fat_count))]
+        unh_satfat =[ int(float(unh_0_recipe.satfat_count)),int(float(unh_1_recipe.satfat_count)),int(float(unh_2_recipe.satfat_count)),int(float(unh_3_recipe.satfat_count)), int(float(unh_4_recipe.satfat_count))]
         
         
 
 
-        salt_unh = [mtl_color(unh_salt),unh_0[7],unh_2[7],unh_4[7]] 
-        sugar_unh = [ mtl_color(unh_sugar),unh_0[8],unh_2[8],unh_4[8]] 
-        fat_unh = [mtl_color(unh_fat),unh_0[9],unh_2[9],unh_4[9]] 
-        satfat_unh = [ mtl_color(unh_satfat),unh_0[10],unh_2[10],unh_4[10]] 
+        salt_unh = [mtl_color(unh_salt),unh_0[7],unh_1[7],unh_2[7],unh_3[7],unh_4[7]] 
+        sugar_unh = [ mtl_color(unh_sugar),unh_0[8],unh_1[8],unh_2[8],unh_3[8],unh_4[8]] 
+        fat_unh = [mtl_color(unh_fat),unh_0[9],unh_1[9],unh_2[9],unh_3[9],unh_4[9]] 
+        satfat_unh = [ mtl_color(unh_satfat),unh_0[10],unh_1[10],unh_2[10],unh_3[10],unh_4[10]] 
 
     # send forms
     return render(request,'Labels_Nudges/recipe_recommendations.html',context={'h_':htop_n_for_target_user, 
                                                 'unh_':unhtop_n_for_target_user,
                                                 'h_0':h_0,
-                                                # 'h_1':h_1,
+                                                'h_1':h_1,
                                                 'h_2':h_2,
                                                 'h_3':h_3,
-                                                # 'h_4':h_4,
+                                                'h_4':h_4,
                                                 'unh_0':unh_0,
-                                                # '':unh_1,
+                                                'unh_1':unh_1,
                                                 'unh_2':unh_2,
-                                                # 'unh_3':unh_3,
+                                                'unh_3':unh_3,
                                                 'unh_4':unh_4,
                                                 'h_salt':salt_h,
                                                 'h_sugar':sugar_h,
@@ -426,10 +427,7 @@ def choice_evaluation(request):
             evaluation_.person_id = person
             # ChoiceEvaltion.person_id = evaluation_form.foriengkey
             evaluation_.session_id = request.session['prolific_id']
-#<<<<<<< HEAD
-#=======
-            #evaluation_.prolific_id = request.session['prolific_id']
-#>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
+
             evaluation_.save()
             return redirect('Labels_Nudges:thank_u')
     else:
