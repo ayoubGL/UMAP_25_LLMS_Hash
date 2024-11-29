@@ -390,6 +390,7 @@ class Recommendations(models.Model):
     recommended_recipes = models.CharField(max_length=500)
     healthiness = models.CharField(max_length=50)
     created = models.DateTimeField(auto_now_add=True)
+    llm_nudges = models.CharField(max_length=2300)
 
 
 
@@ -409,6 +410,7 @@ class SelectedRecipe(models.Model):
     fsa_score = models.CharField(max_length=100)
 
     healthiness = models.CharField(max_length=50)
+    llm_explanation = models.CharField(max_length=1000)
 
     created = models.DateTimeField(auto_now_add=True)
     session_id = models.CharField(max_length=100, blank=False, default=None)

@@ -29,9 +29,6 @@ import re
  #   request.session['person_id'] = 0
   #  return render(request, 'Labels_Nudges/homes.html', context={})
 #=======
-import re
-#>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
-
 def home(request):
     request.session['person_id'] = 0
     #prolific_id = , msg)
@@ -41,20 +38,13 @@ def home(request):
     print('Full',request.get_full_path())
     #print(full_url)
     if 'PROLIFIC_PID' in full_url:
-#<<<<<<< HEAD
         prolific_id = re.search("PROLIFIC_PID=(.*?)&STUDY_ID",full_url)
-#=======
-        prolific_id = re.search("PROLIFIC_PID=%7B%7B%(.*?)\%\%7D%7D&STUDY_ID",full_url)
-#>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
+        print('Idd----',prolific_id)
         request.session['prolific_id'] = str(prolific_id.group(1))
         #print("----------",prolific_id.group(1))
     else:
         request.session['prolific_id'] = '000'
     return render(request, 'Labels_Nudges/homes.html')
-#<<<<<<< HEAD
-
-#=======
-#>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
 
 
 def personal_info(request):
@@ -213,7 +203,7 @@ def recipe_recommendations(request):
 
     
     if  depression == 'Quite a lot':
-        depression ['HighProtein', 'LowCarbs']
+        depressionL= ['HighProtein', 'LowCarbs']
     elif depression == 'Not at all':
         depressionL =  ['NormalProtein', 'NormalCarbs']
     else:
@@ -415,6 +405,7 @@ def recipe_recommendations(request):
         recipe_name = request.POST.get('recipe_name')
         recipe_id = request.POST.get('recipe_id')
         recipe_h  = request.POST.get('healthiness')
+        hashtag = request.POST.get('hashtag')
 
         if recipe_h == 'healthy':
             nutri__fsa = HealthyRecipe.objects.filter(id=recipe_id).values_list('Nutri_score','Fsa_new')
@@ -426,6 +417,7 @@ def recipe_recommendations(request):
         selected_recipe.recipe_name = recipe_name
         selected_recipe.recipe_id = recipe_id
         selected_recipe.healthiness = recipe_h
+        selected_recipe.llm_hashtag = hashtag
         selected_recipe.session_id = request.session['session_id']
         selected_recipe.save()
 
@@ -433,12 +425,14 @@ def recipe_recommendations(request):
         h_recommendations = Recommendations()
         h_recommendations.person_id = person
         h_recommendations.recommended_recipes = [h_0_recipe.id,h_1_recipe.id,h_2_recipe.id,h_3_recipe.id,h_4_recipe.id]
+        h_recommendations.llm_nudges = [h_0_hashtags,h_1_hashtags,h_2_hashtags,h_3_hashtags,h_4_hashtags]
         h_recommendations.healthiness = 'Healthy'
         h_recommendations.save()
 
         unh_recommendations = Recommendations()
         unh_recommendations.person_id = person
         unh_recommendations.recommended_recipes = [unh_0_recipe.id,unh_1_recipe.id,unh_2_recipe.id,unh_3_recipe.id,unh_4_recipe.id]
+        unh_recommendations.llm_nudges = [unh_0_hashtags,unh_1_hashtags,unh_2_hashtags,unh_3_hashtags,unh_4_hashtags]
         unh_recommendations.healthiness = 'Unhealthy'
         unh_recommendations.save()
 

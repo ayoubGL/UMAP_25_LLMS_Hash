@@ -24,6 +24,11 @@ class Personal_infoForm(forms.ModelForm):
             'FK_10' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
             'FK_11' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
             'FK_12' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
+            
+            'sus_1' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
+            'sus_2' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
+            'sus_3' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
+            'sus_4' : forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
 
             #
 
@@ -39,6 +44,11 @@ class Personal_infoForm(forms.ModelForm):
             'FK_10': 'I think I know enough about healthy eating to feel pretty confident when choosing a recipe',
             'FK_11': 'I know a lot about how to evaluate the healthiness of a recipe',
             'FK_12': 'I do NOT feel very knowledgeable about healthy eating',
+            
+            'sus_1': 'I believe that sustainable diet is important in my everyday life',
+            'sus_2': 'Compared with average person, I know  about the environmental impact of food production',
+            'sus_3': 'I believe that individual choices can make a difference in environmental sustainability',
+            'sus_4': 'I believe that sustainable eating is complex',
         
         }
 
@@ -158,10 +168,10 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'many_actions':'Many actions were required to use the system',
             
             # hashtag eval
-            'understandability': 'The hashtags are understandable ',
-            'satisfaction': 'The hashtags helps to increase my satisfaction with the recommender system',
-            'effectiveness': 'The hashtags helps me to understand to which extent the recommended move meets my preferences',
-            'persuasiveness':  'The hashtags makes me want to watch the recommended movie'
+            'understandability': 'The nutritional  labels are understandable ',
+            'satisfaction': 'The nutritional labels helps to increase my satisfaction with the recommender system',
+            'effectiveness': 'The nutritional labels helps me to understand to which extent the recommended recipes meets my preferences',
+            'persuasiveness':  'The nutritional labels makes me want to select the recommended recipe'
             
             
         }
