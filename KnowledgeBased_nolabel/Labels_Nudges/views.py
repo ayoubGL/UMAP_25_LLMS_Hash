@@ -29,9 +29,12 @@ import re
  #   request.session['person_id'] = 0
   #  return render(request, 'Labels_Nudges/homes.html', context={})
 #=======
+<<<<<<< HEAD
 import re
 #>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
 
+=======
+>>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
 def home(request):
     request.session['person_id'] = 0
     #prolific_id = , msg)
@@ -41,20 +44,28 @@ def home(request):
     print('Full',request.get_full_path())
     #print(full_url)
     if 'PROLIFIC_PID' in full_url:
+<<<<<<< HEAD
 #<<<<<<< HEAD
         prolific_id = re.search("PROLIFIC_PID=(.*?)&STUDY_ID",full_url)
 #=======
         prolific_id = re.search("PROLIFIC_PID=%7B%7B%(.*?)\%\%7D%7D&STUDY_ID",full_url)
 #>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
+=======
+        prolific_id = re.search("PROLIFIC_PID=(.*?)&STUDY_ID",full_url)
+        print('Idd----',prolific_id)
+>>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
         request.session['prolific_id'] = str(prolific_id.group(1))
         #print("----------",prolific_id.group(1))
     else:
         request.session['prolific_id'] = '000'
     return render(request, 'Labels_Nudges/homes.html')
+<<<<<<< HEAD
 #<<<<<<< HEAD
 
 #=======
 #>>>>>>> e60f18877d25637f05dff25cde799b8906f7dcab
+=======
+>>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
 
 
 def personal_info(request):

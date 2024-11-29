@@ -121,7 +121,11 @@ LowHighChoices = [
 EatingGoalsChoiecs = [
     (None, ''),
     ('Lose Weight','Lose Weight'),
+<<<<<<< HEAD
     ('Gain Weight','Gain Weigh'),
+=======
+    ('Gain Weight','Gain Weight'),
+>>>>>>> 89d71d3f04e94b95145c280e40401e803701b6ed
     ('No Goal','No Goal'),
     
 ]

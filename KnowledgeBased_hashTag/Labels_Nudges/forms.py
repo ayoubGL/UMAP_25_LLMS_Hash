@@ -46,7 +46,7 @@ class Personal_infoForm(forms.ModelForm):
             'sus_1': 'I believe that sustainable diet is important in my everyday life',
             'sus_2': 'Compared with average person, I know  about the environmental impact of food production',
             'sus_3': 'I believe that individual choices can make a difference in environmental sustainability',
-            'sus_4': 'I believe that sustainable eating is a complex',
+            'sus_4': 'I believe that sustainable eating is complex',
             
         
         }

@@ -25,7 +25,7 @@ databases:
 	[x] KB_expl
 
 - change choice , weight
-	[x] KB_label 
+	[] KB_label 
 	[x] KB_nolabel
 	[x] KB_hashtags
 	[x] KB_expl
@@ -43,19 +43,39 @@ databases:
 	[x] KB_expl
 
 - Depression to deepresionL
-	[] KB_label 
-	[] KB_nolabel
+	[x] KB_label 
+	[x] KB_nolabel
 	[x] KB_hashtags
 	[x] KB_expl
 
+- Finishing
+	[x] KB_label 
+	[x] KB_nolabel
+	[x] KB_hashtags
+	[x] KB_expl.        : CJL9IR62
 
 
+- evaluation questionnaire: 'The explanations helps me to make the final recipe choice'
+	[x] KB_expl.       
+	[] KB_hashtags
+	[] KB_label 
+	[] KB_nolabel
 
- sudo systemctl restart KB_nolabel KB_label KB_hashtags KB_explanations
+- Please Carefully
+	[x] KB_expl.       
+	[] KB_hashtags
+	[] KB_label 
+	[] KB_nolabel
 
-#NutrientRichChoice
-#BalancedNutrition
-#HealthyEatingMadeEasy
-#SatisfyingAndHealthy
-#FuelYourBodyRight
-#NourishingChoice
+- Recipe number h1, unh3, h4, unh_1
+	[x] KB_expl.        
+	[x] KB_hashtags
+	[] KB_label 
+	[] KB_nolabel
+
+
+	
+
+ sudo systemctl restart KB_nolabel KB_label KB_hashtags KB_expl
+
+sudo -u postgres psql

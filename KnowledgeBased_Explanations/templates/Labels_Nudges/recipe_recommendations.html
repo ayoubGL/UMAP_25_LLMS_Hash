@@ -175,21 +175,23 @@
         /* Hashtag styling */
         .hashtag {
             font-size: 1rem;
-            color: #0a0a0a;
-            background-color: #7df08c;
-            font-weight: bold;
-            padding: 6px 12px;
-            border-radius: 20px;
+color: #0a0a0a;
+/* background-color: #7df08c; */
+font-weight: bold;
+padding: 6px 12px;
+border-radius: 20px;
+border: 2px solid #2e2f30; /* Adds a blue border */
             /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
         .un_hashtag {
             font-size: 1rem;
-            color: #0a0a0a;
-            background-color: #ef6a5b;
-            font-weight: bold;
-            padding: 6px 12px;
-            border-radius: 20px;
+color: #0a0a0a;
+/* background-color: #7df08c; */
+font-weight: bold;
+padding: 6px 12px;
+border-radius: 20px;
+border: 2px solid #2e2f30; /* Adds a blue border */
             /* white-space: nowrap; */
             /* Keeps each hashtag on a single line */
         }
@@ -517,11 +519,7 @@
                                     <div class="hashtag-container">
                                         <div class="hashtag">{{h_2_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{h_2_explanation}}' />
-                                        <!-- <span class="hashtag">{{h_2_hashtags.1}}</span>
-                                        <span class="hashtag">{{h_2_hashtags.2}}</span>
-                                        <span class="hashtag">{{h_2_hashtags.3}}</span>
-                                        <span class="hashtag">{{h_2_hashtags.4}}</span>
-                                        <span class="hashtag">{{h_2_hashtags.5}}</span> -->
+                             
                                     </div>
                                     <!---------- Fsa score----------------->
                                 </div>
@@ -534,98 +532,7 @@
                 </form>
 
 
-                <!-- -----------------h_3-------------------- -->
-                <form action="" method="POST" onsubmit="openLoader()">
-                    {% csrf_token %}
-                    <div class="courses-container">
-                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
-                            <div class="course-preview">
-                                <img src="{{h_3.3}}">
-                            </div>
-                            <div class="course-info">
-                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_3.0}}</label>
-                                    <input type="hidden" name="recipe_name" value='{{h_3.0}}' />
-                                    <input type="hidden" name="recipe_id" value='{{h_3.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{h_3.2}}' />
-                                </h5>
-                                <div class="recipe_items">
-                                    <div class="items">
-                                        <span>Servings</span><br>
-                                        <span>{{h_3.5}}</span>
-                                    </div>
-
-                                    <div class="items">
-                                        <h6></h6>
-
-                                    </div>
-                                    <div class="items">
-                                        <span>Serving Size</span><br>
-                                        <span>{{h_3.6}} (g)</span>
-                                    </div>
-                                    <!-- --------------hashtag-------------- -->
-                                    <div class="hashtag-container">
-                                        <div class="hashtag">{{h_3_explanation}}</div>
-                                        <input type="hidden" name="expl" value='{{h_3_explanation}}' />
-                                        <!-- <span class="hashtag">{{h_3_hashtags.1}}</span>
-                                        <span class="hashtag">{{h_3_hashtags.2}}</span>
-                                        <span class="hashtag">{{h_3_hashtags.3}}</span>
-                                        <span class="hashtag">{{h_3_hashtags.4}}</span>
-                                        <span class="hashtag">{{h_3_hashtags.5}}</span> -->
-                                    </div>
-                                </div>
-                                <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <!------ unh_2 --------------------------- -->
-                <form action="" method="POST" onsubmit="openLoader()">
-                    {% csrf_token %}
-                    <div class="courses-container">
-                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
-                            <div class="course-preview">
-                                <img src="{{unh_2.3}}">
-                            </div>
-                            <div class="course-info">
-                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_2.0}}</label>
-                                    <input type="hidden" name="recipe_name" value='{{unh_2.0}}' />
-                                    <input type="hidden" name="recipe_id" value='{{unh_2.1}}' />
-                                    <input type="hidden" name="healthiness" value='{{unh_2.2}}' />
-                                </h5>
-                                <div class="recipe_items">
-                                    <div class="items">
-                                        <span>Servings</span><br>
-                                        <span>{{unh_2.5}}</span>
-                                    </div>
-
-                                    <div class="items">
-                                        <h6></h6>
-                                        <h7></h7>
-                                    </div>
-                                    <div class="items">
-                                        <span>Serving Size</span><br>
-                                        <span>{{unh_2.6}} (g)</span>
-                                    </div>
-                                    <!-- --------------hashtag-------------- -->
-                                    <div class="hashtag-container">
-                                        <div class="un_hashtag">{{unh_2_explanation}}</div>
-                                        <input type="hidden" name="expl" value='{{unh_2_explanation}}' />
-                                        <!-- <span class="hashtag">{{unh_2_hashtags.1}}</span>
-                                        <span class="hashtag">{{unh_2_hashtags.2}}</span>
-                                        <span class="hashtag">{{unh_2_hashtags.3}}</span>
-                                        <span class="hashtag">{{unh_2_hashtags.4}}</span>
-                                        <span class="hashtag">{{unh_2_hashtags.5}}</span> -->
-                                    </div>
-                                </div>
-                                <div>
-                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+               
             </div>
         <!------------------------- Computing Recommendations --------------------------->
                 <div id="loadingModal" class="loader-container" style="display: none;">
@@ -664,15 +571,11 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_0.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                              
                                     <div class="hashtag-container">
                                         <div class="un_hashtag">{{unh_0_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{unh_0_explanation}}' />
-                                        <!-- <span class="hashtag">{{unh_0_hashtags.1}}</span>
-                                        <span class="hashtag">{{unh_0_hashtags.2}}</span>
-                                        <span class="hashtag">{{unh_0_hashtags.3}}</span>
-                                        <span class="hashtag">{{unh_0_hashtags.4}}</span>
-                                        <span class="hashtag">{{unh_0_hashtags.5}}</span> -->
+                                       
                                     </div>
                                 </div>
 
@@ -684,8 +587,92 @@
                         </div>
                     </div>
                 </form>
-                <!-- -----------------unh_1-------------------- -->
+                 <!-- -----------------h_3-------------------- -->
+                 <form action="" method="POST" onsubmit="openLoader()">
+                    {% csrf_token %}
+                    <div class="courses-container">
+                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
+                            <div class="course-preview">
+                                <img src="{{h_3.3}}">
+                            </div>
+                            <div class="course-info">
+                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{h_3.0}}</label>
+                                    <input type="hidden" name="recipe_name" value='{{h_3.0}}' />
+                                    <input type="hidden" name="recipe_id" value='{{h_3.1}}' />
+                                    <input type="hidden" name="healthiness" value='{{h_3.2}}' />
+                                </h5>
+                                <div class="recipe_items">
+                                    <div class="items">
+                                        <span>Servings</span><br>
+                                        <span>{{h_3.5}}</span>
+                                    </div>
+
+                                    <div class="items">
+                                        <h6></h6>
+
+                                    </div>
+                                    <div class="items">
+                                        <span>Serving Size</span><br>
+                                        <span>{{h_3.6}} (g)</span>
+                                    </div>
+                                
+                                    <div class="hashtag-container">
+                                        <div class="hashtag">{{h_3_explanation}}</div>
+                                        <input type="hidden" name="expl" value='{{h_3_explanation}}' />
+                               
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!------ unh_2 --------------------------- -->
                 <form action="" method="POST" onsubmit="openLoader()">
+                    {% csrf_token %}
+                    <div class="courses-container">
+                        <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
+                            <div class="course-preview">
+                                <img src="{{unh_2.3}}">
+                            </div>
+                            <div class="course-info">
+                                <h5><label class="rcp_title" class="rcp_title" for="id_recipe_name">{{unh_2.0}}</label>
+                                    <input type="hidden" name="recipe_name" value='{{unh_2.0}}' />
+                                    <input type="hidden" name="recipe_id" value='{{unh_2.1}}' />
+                                    <input type="hidden" name="healthiness" value='{{unh_2.2}}' />
+                                </h5>
+                                <div class="recipe_items">
+                                    <div class="items">
+                                        <span>Servings</span><br>
+                                        <span>{{unh_2.5}}</span>
+                                    </div>
+
+                                    <div class="items">
+                                        <h6></h6>
+                                        <h7></h7>
+                                    </div>
+                                    <div class="items">
+                                        <span>Serving Size</span><br>
+                                        <span>{{unh_2.6}} (g)</span>
+                                    </div>
+                               
+                                    <div class="hashtag-container">
+                                        <div class="un_hashtag">{{unh_2_explanation}}</div>
+                                        <input type="hidden" name="expl" value='{{unh_2_explanation}}' />
+                              
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="submitted" type="submit " name="submit" class="btn-select" style="display: block;">Select Recipe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- -----------------unh_1-------------------- -->
+                <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -712,15 +699,11 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{unh_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                        
                                     <div class="hashtag-container">
                                         <div class="un_hashtag">{{unh_1_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{unh_1_explanation}}' />
-                                        <!-- <span class="hashtag">{{unh_1_hashtags.1}}</span>
-                                        <span class="hashtag">{{unh_1_hashtags.2}}</span>
-                                        <span class="hashtag">{{unh_1_hashtags.3}}</span>
-                                        <span class="hashtag">{{unh_1_hashtags.4}}</span>
-                                        <span class="hashtag">{{unh_1_hashtags.5}}</span> -->
+
                                     </div>
                                 </div>
                                 <div>
@@ -729,10 +712,10 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
                 <!-- -----------------h_4-------------------- -->
-                <form action="" method="POST" onsubmit="openLoader()">
+                <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -759,15 +742,11 @@
                                         <span>Serving Size</span> <br>
                                         <span>{{h_4.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                       
                                     <div class="hashtag-container">
                                         <div class="hashtag">{{h_4_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{h_4_explanation}}' />
-                                        <!-- <span class="hashtag">{{h_4_hashtags.1}}</span>
-                                        <span class="hashtag">{{h_4_hashtags.2}}</span>
-                                        <span class="hashtag">{{h_4_hashtags.3}}</span>
-                                        <span class="hashtag">{{h_4_hashtags.4}}</span>
-                                        <span class="hashtag">{{h_4_hashtags.5}}</span> -->
+
                                     </div>
                                 </div>
 
@@ -778,11 +757,11 @@
 
                         </div>
                     </div>
-                </form>
+                </form> -->
 
 
                 <!-- ----------------- unh_3-------------------- -->
-                <form action="" method="POST" onsubmit="openLoader()">
+                <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -809,15 +788,11 @@
                                         <span>Serving Size</span><br>
                                         <span>{{unh_3.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
+                       
                                     <div class="hashtag-container">
                                         <div class="un_hashtag">{{unh_3_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{unh_3_explanation}}' />
-                                        <!-- <span class="hashtag">{{unh_3_hashtags.1}}</span>
-                                        <span class="hashtag">{{unh_3_hashtags.2}}</span>
-                                        <span class="hashtag">{{unh_3_hashtags.3}}</span>
-                                        <span class="hashtag">{{unh_3_hashtags.4}}</span>
-                                        <span class="hashtag">{{unh_3_hashtags.5}}</span> -->
+
                                     </div>
                                 </div>
                                 <div>
@@ -826,10 +801,9 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> -->
 
-                <!-- -----------------h_1-------------------- -->
-                <form action="" method="POST" onsubmit="openLoader()">
+                <!-- <form action="" method="POST" onsubmit="openLoader()">
                     {% csrf_token %}
                     <div class="courses-container">
                         <div class="course" style="border: 0.5px solid rgb(165, 158, 158);">
@@ -856,15 +830,10 @@
                                         <span>Serving Size</span><br>
                                         <span>{{h_1.6}} (g)</span>
                                     </div>
-                                    <!-- --------------hashtag-------------- -->
                                     <div class="hashtag-container">
                                         <div class="hashtag">{{h_1_explanation}}</div>
                                         <input type="hidden" name="expl" value='{{h_1_explanation}}' />
-                                        <!-- <span class="hashtag">{{h_1_hashtags.1}}</span>
-                                        <span class="hashtag">{{h_1_hashtags.2}}</span>
-                                        <span class="hashtag">{{h_1_hashtags.3}}</span>
-                                        <span class="hashtag">{{h_1_hashtags.4}}</span>
-                                        <span class="hashtag">{{h_1_hashtags.5}}</span> -->
+
                                     </div>
                                 </div>
 
@@ -876,14 +845,20 @@
 
                         </div>
                     </div>
-                </form>
-
-
+                </form> -->
+               
 
             </div>
 
         </div>
-
+        <hr style="  border: 0; 
+        height: 1px; 
+        background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);" />
+    <h4 style="font-size: 20px;
+    font-weight: 350;
+    line-height: 30px;
+    font-style: bold; margin-top: 10px;">Please carefully review the recipes above and click the <b>'Select
+    Recipe'</b> button of the recipe that you like the most and would like to prepare at home.</h4>
     </div>
 
 

@@ -93,9 +93,9 @@ WSGI_APPLICATION = 'NudgingWithFoodLabels.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'llm_explanation',
+        'NAME': 'llm_explanations',
         'USER':'ayoub',
-        'PASSWORD':'ayoub123',
+        'PASSWORD':'ayoub1234',
         'HOST':'localhost',
         'PORT':'',
     }
