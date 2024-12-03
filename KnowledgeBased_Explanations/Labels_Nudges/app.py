@@ -117,7 +117,7 @@ def get_explanation(user,recipe, healthiness):
     
     unhealthy_prompt =f"Generate a concise, grammatically correct  three line to describe {title} . To generate the explanations emphasize the ingredients of the dish and their healthiness, the FSA score of {Fsa} (10 out of 12 - bad), {calories} calories, {fat}g fat, and {protein}g protein. The explanation should discourage a user with {bmi} BMI, {eating_goal}, {sleep} hours of sleep, {depression}, and {physical_activity} activity to prepare this recipe."
 
-    print("Proooomt", healthy_prompt)
+    # print("Proooomt", healthy_prompt)
 
     # healthy_prompt = f"Provide a concise, grammatically correct 3-line explanations to convince a user with a BMI of {bmi}, an eating goal to {eating_goal}, {sleep} hours of sleep, a {depression} depressed, and {physical_activity} active, to chose {title}.  Highlight the dish\'s healthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
     

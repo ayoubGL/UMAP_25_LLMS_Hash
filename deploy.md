@@ -73,10 +73,22 @@ databases:
 	[x] KB_label 
 	[x] KB_nolabel
 
-- Consent about AI generated explanations	[x] KB_expl.        
+- Consent about AI generated explanations.        
 	[x] KB_explanations
-	[x] KB_hashtags 
+	[x]  KB_hashtags 
 
+- Add Eval questions
+	[x] KB_expl.        
+	[x] KB_hashtags
+	[] KB_label 
+
+
+- Change the prompt
+	[x] KB_expl.        
+	[] KB_hashtags
+	
+
+ 
 
 	
 
