@@ -73,6 +73,10 @@ databases:
 	[x] KB_label 
 	[x] KB_nolabel
 
+- Consent about AI generated explanations	[x] KB_expl.        
+	[x] KB_explanations
+	[x] KB_hashtags 
+
 
 	
 
