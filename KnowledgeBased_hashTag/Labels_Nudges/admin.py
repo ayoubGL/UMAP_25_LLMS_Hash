@@ -97,7 +97,7 @@ class SelectedRecipeAdmin(admin.ModelAdmin):
 
 class EvaluateChoicesAdmin(admin.ModelAdmin):
     list_display = ('id','person','session_id','liked_recipes','prepare_recipes','fit_preference',
-    'know_many','recommend_recipe','many_to_choose','easy_choice','choice_overwhelming','sys_time','unders_sys','many_actions','understandability','satisfaction','effectiveness','persuasiveness','created')
+    'know_many','recommend_recipe','many_to_choose','easy_choice','choice_overwhelming','sys_time','unders_sys','many_actions','understandability','satisfaction','effectiveness','persuasiveness','nudge_eval','created')
     actions = [export_as_csv_action("CSV Export")]
 
 class RecommedationsAdmin(admin.ModelAdmin):

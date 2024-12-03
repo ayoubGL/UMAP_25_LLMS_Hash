@@ -77,7 +77,7 @@ databases:
 	[x] KB_explanations
 	[x]  KB_hashtags 
 
-- Add Eval questions
+- Add Eval questions and admin
 	[x] KB_expl.        
 	[x] KB_hashtags
 	[] KB_label 
@@ -85,7 +85,7 @@ databases:
 
 - Change the prompt
 	[x] KB_expl.        
-	[] KB_hashtags
+	[x] KB_hashtags
 	
 
  
