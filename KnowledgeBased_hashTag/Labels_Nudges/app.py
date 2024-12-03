@@ -98,22 +98,23 @@ def get_hashtag(user,recipe, healthiness):
         prompt = healthy_prompt
     # print('prompt------',prompt)  
     
-    chat_completion = client.chat.completions.create(
-    messages=[
+    # chat_completion = client.chat.completions.create(
+    # messages=[
         
-        {
-            "role":'system',
-            "content": 'you are a nutritionist '
-        },
-        {  
-            "role": "user",
-            "content": prompt,
-        }
-    ],
-    model="gpt-3.5-turbo",
-    )
+    #     # {
+    #     #     "role":'system',
+    #     #     "content": 'you are a nutritionist '
+    #     # },
+    #     {  
+    #         "role": "user",
+    #         "content": prompt,
+    #     }
+    # ],
+    # model="gpt-3.5-turbo",
+    # )
 
-    hashtags = re.findall(r'#\w+', chat_completion.choices[0].message.content)
+    # hashtags = re.findall(r'#\w+', chat_completion.choices[0].message.content)
+    hashtags = "hash"
     
     return hashtags
 
