@@ -82,13 +82,46 @@ def get_explanation(user,recipe, healthiness):
     protein = recipe['protein']
     title  = recipe['title']
     
+    if bmi <= 18:
+        bmi = "lower"
+    elif bmi > 19 and bmi <= 24:
+        bmi = "normal"
+    else:
+        bmi = "higher"
+    if eating_goal == "No Goal":
+        eating_goal = "no eating goal"
+    elif eating_goal == "Gain Weight":
+        eating_goal = "an eating goal to gain weight"
+    else:
+        eating_goal = "no eating to reduce weight"
     
-    user_behavior = 'chose'
+    if sleep == "≤7h":
+        sleep = "few"
+    elif sleep == "7-9h":
+        sleep = "enough"
+    else:
+        sleep = "more"
     
+    if physical_activity == "A lot (>9h)":
+        physical_activity = "very"
+    elif physical_activity == "Average (=6h)":
+        physical_activity = "Medium"
+    else:
+        physical_activity = "not enough"
+    
+        
+        
+        
 
-    healthy_prompt = f"Provide a concise, grammatically correct 3-line explanations to convince a user with a BMI of {bmi}, an eating goal to {eating_goal}, {sleep} hours of sleep, a {depression} depressed, and {physical_activity} active, to chose {title}.  Highlight the dish\'s healthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
+    healthy_prompt =f"Generate a concise, grammatically correct  three line to describe {title}. To generate the explanations emphasize the ingredients of the dish and their healthiness, the FSA score of {Fsa} (6 out of 6 - good), {calories} calories, {fat}g fat, and {protein}g protein. The explanation should convince a user with {bmi} BMI, {eating_goal}, {sleep} hours of sleep, {depression}, and {physical_activity} activity to prepare this recipe."
     
-    unhealthy_prompt = f"Provide a concise, grammatically correct 3-line explanation to discourage a user with a BMI of {bmi}, an eating goal to {eating_goal},{sleep} hours of sleep,  a {depression} depressed, and {physical_activity}  active,  from choosing  {title}. Highlight the dish\'s unhealthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
+    unhealthy_prompt =f"Generate a concise, grammatically correct  three line to describe {title} . To generate the explanations emphasize the ingredients of the dish and their healthiness, the FSA score of {Fsa} (10 out of 12 - bad), {calories} calories, {fat}g fat, and {protein}g protein. The explanation should discourage a user with {bmi} BMI, {eating_goal}, {sleep} hours of sleep, {depression}, and {physical_activity} activity to prepare this recipe."
+
+    print("Proooomt", healthy_prompt)
+
+    # healthy_prompt = f"Provide a concise, grammatically correct 3-line explanations to convince a user with a BMI of {bmi}, an eating goal to {eating_goal}, {sleep} hours of sleep, a {depression} depressed, and {physical_activity} active, to chose {title}.  Highlight the dish\'s healthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
+    
+    # unhealthy_prompt = f"Provide a concise, grammatically correct 3-line explanation to discourage a user with a BMI of {bmi}, an eating goal to {eating_goal},{sleep} hours of sleep,  a {depression} depressed, and {physical_activity}  active,  from choosing  {title}. Highlight the dish\'s unhealthy aspect, such as FSA score of {Fsa}, {calories} calories, {fat}g fat, and {protein}g protein."
   
   
    
@@ -101,10 +134,10 @@ def get_explanation(user,recipe, healthiness):
     
     chat_completion = client.chat.completions.create(
         messages=[
-        {
-            "role":'system',
-            "content": 'you are a nutritionist '
-        },
+        # {
+        #     "role":'system',
+        #     "content": 'you are a nutritionist '
+        # },
         {  
             "role": "user",
             "content": prompt,
@@ -112,8 +145,9 @@ def get_explanation(user,recipe, healthiness):
     model="gpt-3.5-turbo",
     )
 
-    # hashtags = re.findall(r'#\w+', chat_completion.choices[0].message.content)
+    
     exp = chat_completion.choices[0].message.content
+    
     
     return exp
 

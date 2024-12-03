@@ -145,6 +145,7 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'satisfaction':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
             'effectiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
             'persuasiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            'nudge_eval':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
         }
         labels = {
             
@@ -168,9 +169,11 @@ class ChoiceEvaluationForm(forms.ModelForm):
             
             # hashtag eval
             'understandability': 'The explanations are understandable ',
-            'satisfaction': 'The explanations helps to increase my satisfaction with the recommender system',
-            'effectiveness': 'The explanations helps me to understand to which extent the recommended recipe meets my preferences',
+            'satisfaction': 'The explanations help to increase my satisfaction with the recommender system',
+            'effectiveness': 'The explanations help me to understand to which extent the recommended recipe meets my preferences',
+            'nudge_eval': 'The explanations help me understand the healthiness of the recipes',
             'persuasiveness':  'The explanations help me to make the final recipe choice'
+            
             
             
         }
