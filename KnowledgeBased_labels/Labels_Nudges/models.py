@@ -527,6 +527,12 @@ class EvaluateChoices(models.Model):
     default=None,
     blank=False
     )
+    nudge_eval = models.CharField(max_length=100,
+    choices=FK__choices,
+    verbose_name='nudge_eval',
+    default=None,
+    blank=False
+    )
 
 
 
