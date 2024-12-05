@@ -65,7 +65,6 @@ class ProfileForm(forms.ModelForm):
             'Weight':forms.NumberInput(attrs={ 'placeholder':'kg'}),
     
 
-            
             'RecipeWebUsage': forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
             'HomeCook': forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
             'CookingExp':forms.Select(attrs={'class':'form-select form-select-sm clabel','required':True}),
@@ -85,14 +84,14 @@ class ProfileForm(forms.ModelForm):
         labels = {
             
             
-            'RecipeWebUsage': 'Recipe website usage?',
-            'HomeCook':'Frequency of preparing home-cooked meals?',
-            'CookingExp':'Cooking experience?',
-            'EatingGoals':'What is your eating goals?',
+            'RecipeWebUsage': 'How frequently do you use recipe websites?',
+            'HomeCook':'How frequently do you prepare home-cooked meals?',
+            'CookingExp':'What is you cooking experience level?',
+            'EatingGoals':'Do you have any weight-related eating goals?',
             'Depression':'To what extent are you feeling depressed?',
             'PhysicalActivity':'How much physical activity do you do in a week?',
-            'SleepHours' : 'How many hours of sleep do you usually get?',
-            'CookingTime':'The time I have  available for cooking'
+            'SleepHours' : 'How many hours of sleep do you usually get each night?',
+            'CookingTime':'How much time do you typically have available for cooking?'
         }
 
     
@@ -169,13 +168,11 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'many_actions':'Many actions were required to use the system',
             
             # hashtag eval
-            'understandability': 'The nutritional  label are understandable ',
-            'satisfaction': 'The nutritional labels help to increase my satisfaction with the recommender system',
-            'effectiveness': 'The nutritional labels help me to understand to which extent the recommended recipes meets my preferences',
-            'persuasiveness':  'The nutritional labels help me to make the final recipe choice',
-            'nudge_eval': 'The nutritional labels help me understand the healthiness of the recipes'
-            
-            
+            'understandability': 'The nutritional labels were easy to understand',
+            'satisfaction': 'The nutritional labels made it easier to use the system',
+            'effectiveness': 'The  nutritional labels helped me to understand whether the recommended recipes fitted my preferences',
+            'persuasiveness':  'The nutritional labels me to understand the healthiness of each recipe',
+            'nudge_eval': 'The nutritional labels helped me to choose a recipe'
             
         }
 
