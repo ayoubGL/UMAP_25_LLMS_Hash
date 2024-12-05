@@ -82,15 +82,14 @@ class ProfileForm(forms.ModelForm):
         }
         labels = {
             
-            
-            'RecipeWebUsage': 'Recipe website usage?',
-            'HomeCook':'Frequency of preparing home-cooked meals?',
-            'CookingExp':'Cooking experience?',
-            'EatingGoals':'What is your eating goals?',
+           'RecipeWebUsage': 'How frequently do you use recipe websites?',
+            'HomeCook':'How frequently do you prepare home-cooked meals?',
+            'CookingExp':'What is you cooking experience level?',
+            'EatingGoals':'Do you have any weight-related eating goals?',
             'Depression':'To what extent are you feeling depressed?',
             'PhysicalActivity':'How much physical activity do you do in a week?',
-            'SleepHours' : 'How many hours of sleep do you usually get?',
-            'CookingTime':'The time I have  available for cooking'
+            'SleepHours' : 'How many hours of sleep do you usually get each night?',
+            'CookingTime':'How much time do you typically have available for cooking?'
         }
 
     
@@ -141,9 +140,8 @@ class ChoiceEvaluationForm(forms.ModelForm):
             
             # hashtag evaluations
             'understandability':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
-            'satisfaction':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
             'effectiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
-            'persuasiveness':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
+            'nudge_eval':forms.Select(attrs={'class': 'form-select form-select-sm clabel', 'required': True}),
         }
         labels = {
             
@@ -165,11 +163,14 @@ class ChoiceEvaluationForm(forms.ModelForm):
             'unders_sys':'I quickly understood the functionalities of the system',
             'many_actions':'Many actions were required to use the system',
             
+            
+            
             # # hashtag eval
-            # 'understandability': 'The hashtags are understandable ',
+            'understandability': 'It was easy to understand the content of a recipe',
             # 'satisfaction': 'The hashtags helps to increase my satisfaction with the recommender system',
-            # 'effectiveness': 'The hashtags helps me to understand to which extent the recommended move meets my preferences',
+            'effectiveness': 'I could easily understand why recommended recipes fitted my preferences',
             # 'persuasiveness':  'The hashtags makes me want to watch the recommended movie'
+            'nudge_eval': "I understood the healthiness of each recipe"
             
             
         }
