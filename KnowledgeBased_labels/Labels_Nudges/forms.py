@@ -158,7 +158,7 @@ class ChoiceEvaluationForm(forms.ModelForm):
             
             # Choice difficulty 
             'many_to_choose': 'I changed my mind several times before making a decision ',
-            'diet_restriction': 'Do you have any dietary restrictions',
+            # 'diet_restriction': 'Do you have any dietary restrictions',
             'easy_choice': 'It was easy to make this choice ',
             'choice_overwhelming': 'Making a choice was overwhelming ',
 
