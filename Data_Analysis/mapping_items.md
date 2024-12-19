@@ -1,5 +1,5 @@
 ## Labels
-			under_1: 	'understandability': 'It was easy to understand the contents of a recipe',
+		under_1: 	'understandability': 'It was easy to understand the contents of a recipe',
             under_2:	'satisfaction': 'I could easily understand why recommended recipes fitted my preferences',
             under_3		'effectiveness': 'I understood the healthiness of each recipe',
 
