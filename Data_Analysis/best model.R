@@ -8,7 +8,6 @@ understandability =~ under_1 + under_2 + under_3
 
 # Regressions
 fsa_score ~ conditionHashtags + conditionExplanation + conditionLabel  
-
 ChoiceSatisfaction  ~ conditionHashtags + conditionExplanation + conditionLabel
 ChoiceDifficulty  ~ conditionHashtags + conditionExplanation + conditionLabel  
 understandability  ~ conditionHashtags + conditionExplanation + conditionLabel  
@@ -20,7 +19,8 @@ ChoiceDifficulty ~  SubjectiveFoodKnowledge  + Sustainability
 understandability ~  SubjectiveFoodKnowledge  + Sustainability
 "
 
-
+ ~ understandability ~ ChoiceSatisfaction
+ChoiceDifficulty ~ understandability 
 
 
 lavaan 0.6.13 ended normally after 60 iterations
