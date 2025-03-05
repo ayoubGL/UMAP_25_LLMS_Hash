@@ -1,0 +1,86 @@
+id,person,recipe_id,recipe_name,Nutri_score,fsa_score,healthiness,created,session_id
+88,91,561,Moroccan Tagine,A,6,healthy,2024-12-11 14:57:17.943178+00:00,dars155414_91jkidw
+87,87,2746,Hearty Hamburger Soup,A,5,healthy,2024-12-11 14:08:26.915472+00:00,dars145227_87qwfqo
+86,90,2955,Chicken Pasta I,A,5,healthy,2024-12-11 14:02:55.736575+00:00,dars145918_90cljzx
+85,85,2803,Divine Spaghetti Sauce,A,6,healthy,2024-12-11 13:58:39.568072+00:00,dars145030_85opotl
+84,89,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-11 13:56:52.879159+00:00,dars145309_89atpkx
+83,88,2803,Divine Spaghetti Sauce,A,6,healthy,2024-12-11 13:56:01.301776+00:00,dars145237_88ttgxm
+82,86,2955,Chicken Pasta I,A,5,healthy,2024-12-11 13:54:44.750429+00:00,dars145213_86kpqgn
+81,82,5549,Three Meat Cannelloni Bake,B,10,unhealthy,2024-12-11 13:50:51.952377+00:00,dars144804_82yunzg
+80,83,2955,Chicken Pasta I,A,5,healthy,2024-12-11 13:50:37.384955+00:00,dars144839_83ihhia
+79,84,6563,Ricotta Gnocchi,C,10,unhealthy,2024-12-11 13:50:31.167098+00:00,dars144842_84wovzg
+78,80,2329,Lentil Loaf,A,5,healthy,2024-12-11 13:49:23.239189+00:00,dars144745_80scnza
+77,81,2719,Quick and Easy Chicken Noodle Soup,A,6,healthy,2024-12-11 13:48:46.547129+00:00,dars144750_81waaup
+76,79,2871,Slow Cooker Vegetable Beef Soup,A,6,healthy,2024-12-11 13:34:37.936766+00:00,dars143349_79zbjft
+75,78,2955,Chicken Pasta I,A,5,healthy,2024-12-11 09:37:58.313272+00:00,dars103429_78hhuif
+74,77,2619,Slow Cooker Chicken Marrakesh,A,5,healthy,2024-12-11 09:33:07.645419+00:00,dars103208_77bitwi
+73,73,3489,Flank Steak with Avocado Salsa,A,10,unhealthy,2024-12-11 09:31:14.237633+00:00,dars102648_73hpolt
+72,75,2955,Chicken Pasta I,A,5,healthy,2024-12-11 09:30:59.745383+00:00,dars102905_75xkvyr
+71,76,2955,Chicken Pasta I,A,5,healthy,2024-12-11 09:30:59.492334+00:00,dars102905_76tunpw
+70,74,2955,Chicken Pasta I,A,5,healthy,2024-12-11 09:29:09.592710+00:00,dars102721_74wktpq
+69,72,2329,Lentil Loaf,A,5,healthy,2024-12-11 09:28:43.605320+00:00,dars102628_72tbpcb
+68,71,5569,Luscious Chicken Pot Pie,A,10,unhealthy,2024-12-11 09:28:15.803449+00:00,dars102620_71qgcda
+67,70,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-11 09:26:09.811615+00:00,dars102503_70ufyuh
+66,69,2282,Pasta Fagioli Soup II,A,6,healthy,2024-12-11 09:22:42.766705+00:00,dars102131_69ekepg
+65,68,200,Hoisin-Ginger Beef Skewers,B,6,healthy,2024-12-10 19:19:35.377404+00:00,dars201826_68osdvb
+64,67,4376,Eggplant Parmesan II,B,10,unhealthy,2024-12-10 19:19:19.555009+00:00,dars201707_67tjmvp
+63,65,3489,Flank Steak with Avocado Salsa,A,10,unhealthy,2024-12-10 18:52:09.279426+00:00,dars194928_65valua
+62,64,3735,Hawaiian Chicken II,C,10,unhealthy,2024-12-10 18:41:54.235282+00:00,dars193623_64gwwos
+61,63,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-10 18:35:28.105712+00:00,dars193402_63efjhs
+60,49,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:35:13.221314+00:00,dars192606_49jlblp
+59,61,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:31:51.950664+00:00,dars192958_61pmrlo
+58,53,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-10 18:31:28.785841+00:00,dars192623_53mwywr
+57,60,2265,Tomato-Curry Lentil Stew,A,4,healthy,2024-12-10 18:31:02.985540+00:00,dars192947_60qypiu
+55,59,561,Moroccan Tagine,A,6,healthy,2024-12-10 18:30:10.388872+00:00,dars192758_59gamia
+54,41,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:29:11.198212+00:00,dars192531_41adfgw
+53,50,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:29:05.484366+00:00,dars192608_50qwmky
+52,54,2282,Pasta Fagioli Soup II,A,6,healthy,2024-12-10 18:29:04.285651+00:00,dars192631_54ppxkp
+51,58,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:29:03.849411+00:00,dars192742_58fzmex
+50,57,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:28:54.567954+00:00,dars192711_57qjymd
+49,43,561,Moroccan Tagine,A,6,healthy,2024-12-10 18:28:30.774108+00:00,dars192535_43tsukn
+48,44,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:28:11.375035+00:00,dars192543_44dwumo
+47,48,200,Hoisin-Ginger Beef Skewers,B,6,healthy,2024-12-10 18:28:06.386951+00:00,dars192603_48dhoya
+46,26,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-10 18:28:05.604083+00:00,dars192437_26teiqr
+45,47,2871,Slow Cooker Vegetable Beef Soup,A,6,healthy,2024-12-10 18:28:05.342846+00:00,dars192602_47nqyvd
+44,46,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:28:04.867101+00:00,dars192600_46kuzpr
+43,45,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:27:55.446928+00:00,dars192559_45bvpxb
+42,55,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:27:51.907467+00:00,dars192649_55hncav
+41,56,2746,Hearty Hamburger Soup,A,5,healthy,2024-12-10 18:27:48.186345+00:00,dars192659_56dland
+40,35,446,Brazilian Black Bean Stew,A,6,healthy,2024-12-10 18:27:25.079900+00:00,dars192502_35fbpof
+39,39,446,Brazilian Black Bean Stew,A,6,healthy,2024-12-10 18:27:22.142558+00:00,dars192514_39unrcr
+38,42,936,Pork Chop and Cabbage Casserole,A,4,healthy,2024-12-10 18:27:11.892715+00:00,dars192532_42qemhv
+37,31,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:27:11.101362+00:00,dars192451_31arxap
+36,29,2871,Slow Cooker Vegetable Beef Soup,A,6,healthy,2024-12-10 18:27:04.114169+00:00,dars192448_29qulyr
+35,34,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:27:03.219141+00:00,dars192501_34yvpal
+34,33,936,Pork Chop and Cabbage Casserole,A,4,healthy,2024-12-10 18:27:01.326574+00:00,dars192459_33pqrnf
+33,37,200,Hoisin-Ginger Beef Skewers,B,6,healthy,2024-12-10 18:26:46.666575+00:00,dars192510_37ofhjl
+32,15,2746,Hearty Hamburger Soup,A,5,healthy,2024-12-10 18:26:34.988634+00:00,dars192314_15pighs
+31,38,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:26:24.987280+00:00,dars192512_38vjnjn
+30,32,5152,Daddy's Sausage and Peppers,B,10,unhealthy,2024-12-10 18:26:23.044310+00:00,dars192453_32afroe
+29,36,446,Brazilian Black Bean Stew,A,6,healthy,2024-12-10 18:26:20.477513+00:00,dars192505_36qpgft
+28,40,3003,Slow-Cooked White Chili,A,6,healthy,2024-12-10 18:26:19.526057+00:00,dars192521_40fagno
+27,23,561,Moroccan Tagine,A,6,healthy,2024-12-10 18:26:18.366101+00:00,dars192401_23kphod
+26,27,2483,House Fried Rice,B,6,healthy,2024-12-10 18:26:16.138206+00:00,dars192438_27ishci
+25,28,3735,Hawaiian Chicken II,C,10,unhealthy,2024-12-10 18:26:14.472808+00:00,dars192446_28cgohk
+24,22,200,Hoisin-Ginger Beef Skewers,B,6,healthy,2024-12-10 18:26:07.628157+00:00,dars192359_22zmhhn
+23,24,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-10 18:26:03.000373+00:00,dars192407_24ndrnf
+22,30,561,Moroccan Tagine,A,6,healthy,2024-12-10 18:26:01.456721+00:00,dars192449_30kbhuz
+21,19,1005,Michelle's Blonde Chicken Chili,A,4,healthy,2024-12-10 18:25:51.504044+00:00,dars192338_19eukgh
+20,25,6563,Ricotta Gnocchi,C,10,unhealthy,2024-12-10 18:25:44.346377+00:00,dars192431_25yfard
+19,14,446,Brazilian Black Bean Stew,A,6,healthy,2024-12-10 18:25:15.034039+00:00,dars192301_14dspnh
+18,20,200,Hoisin-Ginger Beef Skewers,B,6,healthy,2024-12-10 18:25:09.032283+00:00,dars192342_20zieem
+17,17,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:24:58.465576+00:00,dars192319_17mgyss
+16,21,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:24:55.075824+00:00,dars192347_21pihvk
+15,18,5569,Luscious Chicken Pot Pie,A,10,unhealthy,2024-12-10 18:24:54.616770+00:00,dars192332_18tjyfe
+14,16,2955,Chicken Pasta I,A,5,healthy,2024-12-10 18:24:51.097631+00:00,dars192315_16qytjg
+13,10,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:24:40.036803+00:00,dars192253_10jkffo
+12,9,2282,Pasta Fagioli Soup II,A,6,healthy,2024-12-10 18:24:32.163206+00:00,dars192251_9khqkg
+11,11,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 18:24:29.031270+00:00,dars192254_11xyeqd
+10,13,446,Brazilian Black Bean Stew,A,6,healthy,2024-12-10 18:24:25.712688+00:00,dars192259_13lzniy
+9,12,3735,Hawaiian Chicken II,C,10,unhealthy,2024-12-10 18:24:21.159943+00:00,dars192256_12pjfgc
+8,8,2803,Divine Spaghetti Sauce,A,6,healthy,2024-12-10 18:23:52.930673+00:00,dars192249_8zfars
+7,5,494,Apple Glazed Pork Tenderloin,A,6,healthy,2024-12-10 16:03:05.055882+00:00,dars165907_5mylyv
+6,7,2483,House Fried Rice,B,6,healthy,2024-12-10 16:02:58.917822+00:00,dars170102_7qwqnw
+5,6,2483,House Fried Rice,B,6,healthy,2024-12-10 16:01:07.139709+00:00,dars165917_6lyvxh
+4,3,2955,Chicken Pasta I,A,5,healthy,2024-12-10 16:00:41.695669+00:00,dars165828_3aurxq
+3,4,2871,Slow Cooker Vegetable Beef Soup,A,6,healthy,2024-12-10 16:00:22.903800+00:00,dars165903_4enacb

@@ -1,0 +1,82 @@
+id,person,title,Height,Weight,RecipeWebUsage,HomeCook,CookingExp,EatingGoals,Depression,PhysicalActivity,SleepHours,CookingTime
+4,4,Profile,178,86,Monthly,Daily,High,Lose Weight,Somewhat,Not enough (<3h),7-9h,≥60min
+5,5,Profile,183,89,Weekly,Daily,High,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+6,6,Profile,160,60,Monthly,Daily,High,Lose Weight,Not at all,Not enough (<3h),7-9h,30-60min
+7,7,Profile,167,61,Monthly,Daily,Medium,No Goal,Not at all,Average (=6h),7-9h,30-60min
+8,8,Profile,170,96,Monthly,Daily,Medium,Lose Weight,Not at all,Not enough (<3h),≤7h,30-60min
+9,10,Profile,163,50,Weekly,Weekly,Medium,Lose Weight,Not at all,Not enough (<3h),≤7h,≤30min
+10,9,Profile,164,53,Weekly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),7-9h,30-60min
+11,14,Profile,165,54,Weekly,Daily,High,No Goal,Not at all,Average (=6h),7-9h,30-60min
+12,15,Profile,161,60,Weekly,Daily,Very_High,No Goal,Not at all,A lot (>9h),7-9h,≥60min
+13,12,Profile,162,63,Weekly,Daily,Medium,No Goal,Somewhat,Not enough (<3h),7-9h,30-60min
+14,22,Profile,193,88,Monthly,Weekly,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+15,17,Profile,160,48,Weekly,Daily,High,No Goal,Quite a lot,Average (=6h),≤7h,30-60min
+16,11,Profile,157,49,Monthly,Daily,Medium,Gain Weight,Quite a lot,Not enough (<3h),≤7h,≥60min
+17,20,Profile,192,118,Weekly,Daily,Medium,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+18,16,Profile,170,82,Monthly,Weekly,Medium,No Goal,Somewhat,Not enough (<3h),≤7h,30-60min
+19,21,Profile,183,96,Monthly,Daily,High,No Goal,Not at all,Average (=6h),≤7h,30-60min
+20,19,Profile,153,56,Weekly,Daily,High,No Goal,Not at all,A lot (>9h),7-9h,30-60min
+21,18,Profile,149,68,Daily,Daily,High,Lose Weight,Quite a lot,Not enough (<3h),≥9h,≥60min
+22,32,Profile,176,76,Monthly,Daily,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+23,23,Profile,167,54,Monthly,Weekly,Low,No Goal,Not at all,Average (=6h),7-9h,30-60min
+24,29,Profile,169,60,Monthly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),≤7h,30-60min
+25,28,Profile,55,15,Monthly,Daily,Very_Low,Lose Weight,Somewhat,Average (=6h),≤7h,30-60min
+26,26,Profile,162,80,Monthly,Weekly,Medium,Lose Weight,Not at all,A lot (>9h),7-9h,≥60min
+27,31,Profile,171,90,Weekly,Weekly,High,Lose Weight,Somewhat,Not enough (<3h),7-9h,30-60min
+28,30,Profile,180,85,Monthly,Weekly,Medium,Lose Weight,Not at all,Average (=6h),7-9h,≥60min
+29,33,Profile,160,50,Monthly,Daily,High,Lose Weight,Somewhat,Not enough (<3h),7-9h,≥60min
+30,25,Profile,188,66,Monthly,Weekly,High,No Goal,Somewhat,Not enough (<3h),7-9h,≥60min
+31,35,Profile,190,92,Weekly,Daily,High,Lose Weight,Not at all,A lot (>9h),7-9h,30-60min
+32,44,Profile,182,72,Weekly,Daily,Medium,No Goal,Not at all,A lot (>9h),≤7h,30-60min
+33,38,Profile,177,80,Monthly,Daily,Medium,Lose Weight,Not at all,Average (=6h),7-9h,30-60min
+34,37,Profile,154,49,Weekly,Daily,High,No Goal,Not at all,A lot (>9h),7-9h,≥60min
+35,36,Profile,178,80,Monthly,Daily,High,Lose Weight,Not at all,Average (=6h),7-9h,≥60min
+36,43,Profile,160,80,Monthly,Daily,High,Lose Weight,Somewhat,Not enough (<3h),≤7h,≤30min
+37,27,Profile,162,76,Weekly,Monthly,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+38,24,Profile,170,75,Monthly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),≤7h,30-60min
+39,48,Profile,164,72,Monthly,Weekly,Low,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+40,34,Profile,174,79,Weekly,Daily,Medium,Lose Weight,Quite a lot,Average (=6h),≤7h,30-60min
+41,46,Profile,165,76,Weekly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),≤7h,30-60min
+42,39,Profile,172,81,Weekly,Daily,High,Lose Weight,Not at all,Average (=6h),7-9h,30-60min
+43,51,Profile,171,105,Weekly,Daily,High,No Goal,Somewhat,Average (=6h),7-9h,30-60min
+44,52,Profile,164,59,Monthly,Daily,Medium,Lose Weight,Quite a lot,Not enough (<3h),≥9h,≥60min
+45,42,Profile,6,200,Weekly,Weekly,High,No Goal,Not at all,Average (=6h),≤7h,30-60min
+46,41,Profile,160,91,Weekly,Daily,Medium,No Goal,Not at all,Average (=6h),7-9h,30-60min
+47,49,Profile,172,59,Weekly,Weekly,Medium,No Goal,Somewhat,Average (=6h),7-9h,30-60min
+48,47,Profile,183,97,Monthly,Daily,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+49,50,Profile,162,61,Monthly,Daily,High,No Goal,Not at all,Average (=6h),7-9h,≥60min
+50,59,Profile,180,57,Monthly,Daily,Medium,No Goal,Not at all,Average (=6h),7-9h,30-60min
+51,58,Profile,162,74,Monthly,Weekly,Medium,Lose Weight,Not at all,Average (=6h),7-9h,30-60min
+52,56,Profile,188,91,Weekly,Daily,High,No Goal,Not at all,A lot (>9h),7-9h,30-60min
+53,57,Profile,160,61,Weekly,Daily,Medium,Lose Weight,Somewhat,Average (=6h),≤7h,≥60min
+54,60,Profile,173,55,Monthly,Weekly,Medium,Gain Weight,Somewhat,Average (=6h),7-9h,≥60min
+55,53,Profile,162,107,Monthly,Daily,High,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+56,64,Profile,162,120,Weekly,Daily,High,Lose Weight,Somewhat,Not enough (<3h),≤7h,30-60min
+57,65,Profile,160,55,Monthly,Weekly,Medium,Lose Weight,Not at all,Average (=6h),7-9h,30-60min
+58,67,Profile,170,75,Monthly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),≤7h,≤30min
+59,62,Profile,187,83,Monthly,Daily,Very_High,Lose Weight,Not at all,Not enough (<3h),≤7h,≥60min
+60,66,Profile,178,69,Monthly,Daily,Medium,No Goal,Not at all,Average (=6h),7-9h,30-60min
+61,61,Profile,158,64,Weekly,Daily,High,No Goal,Not at all,Not enough (<3h),≤7h,30-60min
+62,68,Profile,164,70,Monthly,Daily,Medium,Lose Weight,Somewhat,Not enough (<3h),7-9h,30-60min
+63,63,Profile,146,53,Monthly,Daily,Very_High,No Goal,Not at all,Average (=6h),7-9h,30-60min
+64,69,Profile,154,54,Monthly,Weekly,Medium,No Goal,Quite a lot,Average (=6h),7-9h,30-60min
+65,71,Profile,5,3,Weekly,Daily,High,Lose Weight,Somewhat,Average (=6h),7-9h,≥60min
+66,70,Profile,173,56,Monthly,Weekly,Medium,Gain Weight,Somewhat,Average (=6h),7-9h,≤30min
+67,73,Profile,155,62,Monthly,Daily,High,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+68,74,Profile,172,102,Monthly,Monthly,Low,Lose Weight,Not at all,Average (=6h),7-9h,30-60min
+69,72,Profile,5,70,Monthly,Daily,Medium,No Goal,Somewhat,Average (=6h),7-9h,30-60min
+70,75,Profile,188,120,Monthly,Daily,Low,Lose Weight,Not at all,Average (=6h),≤7h,≤30min
+71,76,Profile,170,68,Monthly,Daily,Very_Low,Lose Weight,Somewhat,Average (=6h),≤7h,≤30min
+72,78,Profile,157,54,Weekly,Weekly,High,No Goal,Not at all,Average (=6h),≤7h,30-60min
+73,77,Profile,160,54,Monthly,Daily,Medium,No Goal,Somewhat,A lot (>9h),≤7h,30-60min
+74,81,Profile,193,90,Weekly,Weekly,Medium,No Goal,Not at all,Average (=6h),≤7h,30-60min
+75,82,Profile,157,96,Monthly,Daily,High,Lose Weight,Somewhat,Not enough (<3h),≤7h,30-60min
+76,79,Profile,161,72,Monthly,Weekly,Very_High,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+77,80,Profile,182,83,Monthly,Weekly,Very_Low,No Goal,Not at all,Not enough (<3h),7-9h,≤30min
+78,83,Profile,175,83,Monthly,Daily,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,30-60min
+79,84,Profile,165,65,Weekly,Weekly,High,Lose Weight,Not at all,Average (=6h),≤7h,30-60min
+80,85,Profile,175,85,Weekly,Daily,High,No Goal,Not at all,Average (=6h),7-9h,30-60min
+81,87,Profile,160,79,Monthly,Monthly,Low,Lose Weight,Not at all,Average (=6h),≤7h,≤30min
+82,88,Profile,162,57,Monthly,Weekly,Medium,No Goal,Not at all,Average (=6h),≤7h,≤30min
+83,86,Profile,167,76,Weekly,Daily,Medium,Lose Weight,Somewhat,Average (=6h),7-9h,≥60min
+84,89,Profile,157,44,Daily,Daily,Very_High,No Goal,Somewhat,Average (=6h),7-9h,30-60min
