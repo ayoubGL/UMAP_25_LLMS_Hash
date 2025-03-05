@@ -1,7 +1,14 @@
 # Nudging Healthy Choices: Leveraging LLM-Generated Hashtags and Explanations in Personalized Food Recommendations
 
 ## Overview
-This project aim to implements a recipe recommender system supported by LLM and MTL label to support user towards healthier food choice, the results of the project are submitted to UMAP 2025. For reseach purpose and experimental design, the project consisit of four condition, each condition in each own folder:
+This project aims to develop a recipe recommender system enhanced by Large Language Models (LLMs) and Multiple Traffic Light (MTL) labels to guide users toward healthier food choices. The results of this research have been submitted to UMAP 2025. For research and experimental purposes, the project includes four distinct conditions, each organized in its own folder.
+```
+- KnowledgeBased_Explanation/ ## LLM-based explanations as a nudge condition
+- KnowledgeBased_hashTag/ ## LLM-based Hashatgs as a nudge condition
+- KnowledgeBased_labels/ ## MTL condition as a nudge 
+- KnowledgeBased_nolabel/ ## noLabel (baseline) condition as a nudge 
+```
+
 
 
 ```
