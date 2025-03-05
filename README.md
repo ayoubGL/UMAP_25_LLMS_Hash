@@ -4,19 +4,20 @@
 This project aim to implements a recipe recommender system supported by LLM and MTL label to support user towards healthier food choice, the results of the project are submitted to UMAP 2025. For reseach purpose and experimental design, the project consisit of four condition, each condition in each own folder:
 
 
+```
 KnowledgeBased_Explanation/  # The LLM-generated condition
-│── Labels_nudge/
-│   │── views.py  # Contains the logic of the system and algorithm to compute the MTL label and FSA score for each recommended recipe.
-│   │── app.py  
-│   │   │── get_top_recommendation  # Computes top personalized recipe recommendations for each active user based on the KB approach.
-│   │   │── get_explanation  # LLM API call to generate explanations/hashtags associated with a given recipe for the active user.
+├── Labels_nudge/
+│   ├── views.py  # Contains the logic of the system and algorithm to compute the MTL label and FSA score for each recommended recipe.
+│   ├── app.py  
+│   │   ├── get_top_recommendation  # Computes top personalized recipe recommendations for each active user based on the KB approach.
+│   │   ├── get_explanation  # LLM API call to generate explanations/hashtags associated with a given recipe for the active user.
 
 Data_csv/  # Contains all datasets used in the experiment
 
 Data_analysis/
-│── DA_UMAP25.ipynb  # Data analysis and pre-processing in Python
-│── DA_umap25_R.ipynb  # Statistical analysis using R
-
+├── DA_UMAP25.ipynb  # Data analysis and pre-processing in Python
+├── DA_umap25_R.ipynb  # Statistical analysis using R
+```
 
 
 
