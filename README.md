@@ -1,4 +1,4 @@
-# Project Title
+# Nudging Healthy Choices: Leveraging LLM-Generated Hashtags and Explanations in Personalized Food Recommendations
 
 ## Overview
 This project aim to implements a recipe recommender system supported by LLM and MTL label to support user towards healthier food choice, the results of the project are submitted to UMAP 2025. For reseach purpose and experimental design, the project consisit of four condition, each condition in each own folder:
