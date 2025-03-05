@@ -74,4 +74,4 @@ The `Data_analysis` folder contains collected data from each experimental condit
 This project is licensed under [MIT License](LICENSE).
 
 ## Contact
-For further inquiries, please contact the paper authors [Anonymous@xx.com].
+For further inquiries, please contact the paper authors [Anonymous@Anonymous.Anonymou].
