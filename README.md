@@ -17,9 +17,6 @@ This project aim to implements a recipe recommender system supported by LLM and 
 ├── README.md
 
 
-- The LLm generate hahstags:
-- The MTL label
-- The Nolabel condition:
 
 
 ### Prerequisites
