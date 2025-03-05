@@ -49,7 +49,8 @@ Each experimental condition has its corresponding script. Below are the steps to
 ### LLM-Explanation Condition
 To run the LLM-based explanation condition:
 ```sh
-python KnowledgeBased_Explanation.py
+## folder KnowledgeBased_Explanation
+python manage.py runserver
 ```
 
 ### Multipe Traffic Light  Algorithm Computation
